@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RESPONSIBLEMENUcontroller">
-   <children>
-      <Button layoutX="229.0" layoutY="166.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="119.0" text="hello" />
-   </children>
+<Scene xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RESPONSIBLEMENUcontroller">
+<AnchorPane prefHeight="400.0" prefWidth="600.0">
+      <children>
+         <Label layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="88.0" text="Logged in as: ">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <Button onMouseClicked="#logout" layoutX="528.0" layoutY="27.0" mnemonicParsing="false" text="Log out" />
+         <Button onMouseClicked="#CREATEVOLUNTEER" layoutX="238.0" layoutY="132.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="123.0" text="Create Volunteer" />
+         <Button onMouseClicked="#EDITVOLUNTEER" layoutX="236.0" layoutY="172.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="128.0" text="Edit Volunteer" />
+         <Button onMouseClicked="#CreateShift" layoutX="237.0" layoutY="214.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="126.0" text="Create Shift" />
+         <Button onMouseClicked="#EditShift" layoutX="238.0" layoutY="258.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="124.0" text="Edit Shift" />
+      </children>
 </AnchorPane>
+</Scene>

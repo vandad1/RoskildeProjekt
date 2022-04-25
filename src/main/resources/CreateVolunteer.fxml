@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<Scene xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CreateVController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <Label layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="88.0" text="Logged in as: ">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Button layoutX="528.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#logout" text="Log out" />
+         <Button onMouseClicked="#GoBackMenuR" layoutX="14.0" layoutY="40.0" mnemonicParsing="false" text="←">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Button>
+    </children>
+</AnchorPane>
+
+</Scene>
