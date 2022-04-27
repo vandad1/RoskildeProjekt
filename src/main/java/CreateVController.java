@@ -2,14 +2,17 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-
 import java.awt.*;
 import java.io.*;
+import java.security.SecureRandom;
 import java.util.Objects;
+import java.util.Random;
 
-public class CreateVController implements AppContact {
+import static javafx.scene.paint.Color.GREEN;
 
-    public Label missing;
+public class CreateVController<bogstaver> implements AppContact {
+
+
     @FXML
     private APPHANDLER app;
 
@@ -30,6 +33,9 @@ public class CreateVController implements AppContact {
     public TextField email;
     public TextField phonenr;
     public TextField address;
+    public Label missing;
+    public Label auto;
+    public Label password;
 
 
 
@@ -40,24 +46,40 @@ public class CreateVController implements AppContact {
         String address1 = address.getText();
 
 
-        while(Objects.equals(name1, "") || Objects.equals(email1, "") || Objects.equals(phonenr1, "")|| Objects.equals(address1, "")){
+        if(Objects.equals(name1, "") || Objects.equals(email1, "") || Objects.equals(phonenr1, "")|| Objects.equals(address1, "")){
             missing.setText("Missing information!");
+        }
+        else{
+            File volunteerInfo = new File("VolunteerData.txt");
+
+            BufferedWriter bw = new BufferedWriter(new FileWriter(volunteerInfo, true));
+            PrintWriter pw = new PrintWriter(bw);
+
+            bw.write(name1 + "\n");
+            bw.write(email1 + "\n");
+            bw.write(phonenr1 + "\n");
+            bw.write(address1 + "\n");
+
+            char[] lowercase = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+            char[] numbers = "0123456789".toCharArray();
+            char[] allAllowed = "abcdefghijklmnopqrstuvwxyz0123456789".toCharArray();
+            Random random = new SecureRandom();
+            StringBuilder pass = new StringBuilder();
+            for(int i = 0; i < 5; i++){
+                pass.append(allAllowed[random.nextInt(allAllowed.length)]);
+            }
+
+            password.setText(String.valueOf(pass));
+            bw.write(password + "\n\n");
+            bw.close();
+            auto.setText("Auto Generated Password:" );
+
+            missing.setTextFill(GREEN);
+            missing.setText("Volunteer Created Succesfully!");
+
         }
 
 
-
-
-        File volunteerInfo = new File("VolunteerData.txt");
-
-        BufferedWriter bw = new BufferedWriter(new FileWriter(volunteerInfo, true));
-        PrintWriter pw = new PrintWriter(bw);
-
-        bw.write(name1 + "\n");
-        bw.write(email1 + "\n");
-        bw.write(phonenr1 + "\n");
-        bw.write(address1 + "\n");
-
-        bw.close();
     }
 
 

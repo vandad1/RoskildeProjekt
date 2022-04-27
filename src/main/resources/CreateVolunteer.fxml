@@ -55,11 +55,19 @@
                <Font size="14.0" />
             </font>
          </Button>
-         <Label fx:id="missing" layoutX="133.0" layoutY="343.0" prefHeight="18.0" prefWidth="153.0" text="">
+         <Label fx:id="missing" layoutX="133.0" layoutY="343.0" prefHeight="18.0" prefWidth="200.0" style="-fx-text-fill: RED">
             <font>
                <Font size="14.0" />
             </font>
          </Label>
+         <Label fx:id="auto" layoutX="325.0" layoutY="145.0" prefHeight="18.0" prefWidth="200.0" text="">
+            <font>
+               <Font size="14.0" />
+            </font></Label>
+        <Label fx:id="password" layoutX="325.0" layoutY="165.0" prefHeight="18.0" prefWidth="200.0" text="">
+            <font>
+               <Font size="14.0" />
+            </font></Label>
     </children>
 </AnchorPane>
 
