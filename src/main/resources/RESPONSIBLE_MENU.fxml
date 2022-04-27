@@ -13,11 +13,11 @@
                <Font size="14.0" />
             </font>
          </Label>
-         <Button onMouseClicked="#logout" layoutX="528.0" layoutY="27.0" mnemonicParsing="false" text="Log out" />
-         <Button onMouseClicked="#CREATEVOLUNTEER" layoutX="238.0" layoutY="132.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="123.0" text="Create Volunteer" />
-         <Button onMouseClicked="#EDITVOLUNTEER" layoutX="236.0" layoutY="172.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="128.0" text="Edit Volunteer" />
-         <Button onMouseClicked="#CreateShift" layoutX="237.0" layoutY="214.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="126.0" text="Create Shift" />
-         <Button onMouseClicked="#EditShift" layoutX="238.0" layoutY="258.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="124.0" text="Edit Shift" />
+         <Button layoutX="528.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#logout" text="Log out" />
+         <Button layoutX="238.0" layoutY="132.0" mnemonicParsing="false" onMouseClicked="#CREATEVOLUNTEER" prefHeight="23.0" prefWidth="123.0" text="Create Volunteer" />
+         <Button layoutX="236.0" layoutY="172.0" mnemonicParsing="false" onMouseClicked="#EDITVOLUNTEER" prefHeight="27.0" prefWidth="128.0" text="Edit Volunteer" />
+         <Button layoutX="237.0" layoutY="214.0" mnemonicParsing="false" onMouseClicked="#CreateShift" prefHeight="23.0" prefWidth="126.0" text="Create Shift" />
+         <Button layoutX="238.0" layoutY="258.0" mnemonicParsing="false" onMouseClicked="#EditShift" prefHeight="22.0" prefWidth="124.0" text="Edit Shift" />
       </children>
 </AnchorPane>
 </Scene>

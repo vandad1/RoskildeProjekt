@@ -6,11 +6,11 @@
 <?import javafx.scene.text.*?>
 
 <Scene xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ForsideController">
-<AnchorPane prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ff6600">
       <children>
-         <Label layoutX="212.0" layoutY="14.0" prefHeight="63.0" prefWidth="176.0" text="Roskilde Festival">
+         <Label layoutX="212.0" layoutY="14.0" prefHeight="63.0" prefWidth="176.0" text="Roskilde Festival" textAlignment="CENTER">
             <font>
-               <Font size="24.0" />
+               <Font name="System Bold" size="20.0" />
             </font>
          </Label>
          <Label layoutX="265.0" layoutY="112.0" prefHeight="34.0" prefWidth="81.0" text="Log in as">
@@ -18,7 +18,13 @@
                <Font size="18.0" />
             </font>
          </Label>
-         <Button onMouseClicked="#LogInR" layoutX="252.0" layoutY="179.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="108.0" text="Responsible" />
-         <Button layoutX="252.0" layoutY="246.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="108.0" text="Volunteer" />
+         <Button layoutX="252.0" layoutY="179.0" mnemonicParsing="false" onMouseClicked="#LogInR" prefHeight="42.0" prefWidth="108.0" text="Responsible">
+            <font>
+               <Font size="16.0" />
+            </font></Button>
+         <Button layoutX="252.0" layoutY="246.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="108.0" text="Volunteer" >
+            <font>
+               <Font size="16.0" />
+            </font></Button>
       </children></AnchorPane>
 </Scene>

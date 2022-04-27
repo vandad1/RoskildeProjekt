@@ -13,13 +13,10 @@ import javafx.scene.paint.Color;
 
 
 public class LogInRController implements AppContact {
-    public Label wrong;
     public Label login;
-
 
     @FXML
     private APPHANDLER app;
-
 
     @FXML
     public void setApp(APPHANDLER apphandler) {
@@ -37,9 +34,9 @@ public class LogInRController implements AppContact {
         String usernameuse = username.getText();
 
 
-        File file = new File("ResponsibleData.txt");
+        File responsibleData = new File("ResponsibleData.txt");
 
-        BufferedReader rd = new BufferedReader(new FileReader(file));
+        BufferedReader rd = new BufferedReader(new FileReader(responsibleData));
 
         String s;
         while ((s = rd.readLine()) != null) {

@@ -1,6 +1,7 @@
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
 
+import java.awt.*;
 import java.io.IOException;
 
 public class RESPONSIBLEMENUcontroller implements AppContact {
@@ -17,6 +18,7 @@ public class RESPONSIBLEMENUcontroller implements AppContact {
     }
 
 
+
     public void logout(MouseEvent mouseEvent) throws IOException {
         app.logout1();
     }
@@ -30,11 +32,11 @@ public class RESPONSIBLEMENUcontroller implements AppContact {
     }
 
     public void CreateShift(MouseEvent mouseEvent) throws IOException {
-        app.CreateV();
+        app.CreateShift();
     }
 
     public void EditShift(MouseEvent mouseEvent) throws IOException {
-        app.EditV();
+        app.EditShifts();
     }
 
 
