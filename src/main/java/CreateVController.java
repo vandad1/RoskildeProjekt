@@ -60,13 +60,11 @@ public class CreateVController<bogstaver> implements AppContact {
             bw.write(phonenr1 + "\n");
             bw.write(address1 + "\n");
 
-            char[] lowercase = "abcdefghijklmnopqrstuvwxyz".toCharArray();
-            char[] numbers = "0123456789".toCharArray();
-            char[] allAllowed = "abcdefghijklmnopqrstuvwxyz0123456789".toCharArray();
+            char[] characters = "abcdefghijklmnopqrstuvwxyz0123456789".toCharArray();
             Random random = new SecureRandom();
             StringBuilder pass = new StringBuilder();
             for(int i = 0; i < 5; i++){
-                pass.append(allAllowed[random.nextInt(allAllowed.length)]);
+                pass.append(characters[random.nextInt(characters.length)]);
             }
 
             password.setText(String.valueOf(pass));
