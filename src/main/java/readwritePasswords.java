@@ -15,7 +15,7 @@ public class readwritePasswords {
         Scanner scanner = new Scanner(System.in);
         String str = scanner.nextLine();
         byte[] data = str.getBytes();
-        Path path = Paths.get("./Passwords.txt");
+        Path path = Paths.get("./Passwords.csv");
 
         try (OutputStream out = new BufferedOutputStream(Files.newOutputStream(path, CREATE, APPEND))) {
             out.write(data, 0, data.length);
