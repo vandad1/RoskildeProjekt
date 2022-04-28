@@ -1,9 +1,16 @@
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
-import java.io.IOException;
+import java.io.*;
+
+import static javafx.scene.paint.Color.GREEN;
+import static javafx.scene.paint.Color.RED;
 
 public class CreateShiftsController implements AppContact{
+
+
 
     @FXML
     private APPHANDLER app;
@@ -21,7 +28,30 @@ public class CreateShiftsController implements AppContact{
         app.logout1();
     }
 
+    public Label foundor;
+    public TextField fullname;
+
+    public void confirm(MouseEvent mouseEvent) throws IOException{
+
+        File VolunteerData = new File("VolunteerData.txt");
+        BufferedReader br = new BufferedReader(new FileReader(VolunteerData));
+        String s;
+        String name = fullname.getText();
+
+        while((s = br.readLine()) != null){
+            if(s.equals(name)){
+                System.out.println("x");
+                foundor.setText("Person found!");
+                foundor.setTextFill(GREEN);
+
+            }
+            else{
+                foundor.setText("Person not found in system");
+                foundor.setTextFill(RED);
+            }
+
+        }
 
 
-
+    }
 }

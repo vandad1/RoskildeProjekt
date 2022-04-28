@@ -10,7 +10,7 @@ import java.util.Random;
 
 import static javafx.scene.paint.Color.GREEN;
 
-public class CreateVController<bogstaver> implements AppContact {
+public class CreateVController implements AppContact {
 
 
     @FXML
@@ -66,9 +66,9 @@ public class CreateVController<bogstaver> implements AppContact {
             for(int i = 0; i < 5; i++){
                 pass.append(characters[random.nextInt(characters.length)]);
             }
+            bw.write(String.valueOf(pass) + "\n\n");
 
             password.setText(String.valueOf(pass));
-            bw.write(password + "\n\n");
             bw.close();
             auto.setText("Auto Generated Password:" );
 

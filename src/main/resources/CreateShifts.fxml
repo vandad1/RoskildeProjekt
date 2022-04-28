@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<Scene xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CreateShiftsController">
+<Scene xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CreateShiftsController">
 <AnchorPane prefHeight="400.0" prefWidth="600.0">
     <children>
         <Label layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="88.0" text="Logged in as: ">
@@ -47,6 +50,13 @@
             </font>
          </Label>
          <TextField layoutX="202.0" layoutY="238.0" prefHeight="26.0" prefWidth="181.0" />
+         <TextField layoutX="202.0" layoutY="127.0" prefHeight="26.0" prefWidth="179.0" promptText="Full Name" />
+         <Button layoutX="401.0" layoutY="128.0" mnemonicParsing="false" onMouseClicked="#confirm" text="Confirm" />
+         <Label fx:id="foundor" layoutX="205.0" layoutY="156.0" prefHeight="18.0" prefWidth="170.0" text="                   ">
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Label>
     </children></AnchorPane>
 
 </Scene>
