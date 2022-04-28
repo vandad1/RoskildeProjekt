@@ -66,7 +66,11 @@ public class CreateVController implements AppContact {
             for(int i = 0; i < 5; i++){
                 pass.append(characters[random.nextInt(characters.length)]);
             }
-            bw.write(String.valueOf(pass) + "\n\n");
+            bw.write(String.valueOf(pass) + "\n");
+            for(int i = 0; i < 2; i++){
+                bw.write("\n");
+            }
+
 
             password.setText(String.valueOf(pass));
             bw.close();

@@ -40,5 +40,6 @@
          <TextField fx:id="address" layoutX="57.0" layoutY="254.0" prefHeight="26.0" prefWidth="175.0" promptText="Address" />
          <Button layoutX="57.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#save" prefHeight="26.0" prefWidth="174.0" text="Save Changes" />
          <Button layoutX="59.0" layoutY="336.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="170.0" text="Delete Volunteer" textFill="RED" />
+         <Label fx:id="notfound" layoutX="205.0" layoutY="155.0" prefHeight="18.0" prefWidth="150.0" />
       </children></AnchorPane>
 </Scene>

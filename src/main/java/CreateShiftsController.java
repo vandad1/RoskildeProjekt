@@ -40,10 +40,9 @@ public class CreateShiftsController implements AppContact{
 
         while((s = br.readLine()) != null){
             if(s.equals(name)){
-                System.out.println("x");
                 foundor.setText("Person found!");
                 foundor.setTextFill(GREEN);
-
+                break;
             }
             else{
                 foundor.setText("Person not found in system");

@@ -1,10 +1,14 @@
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 
 import java.io.*;
+
+import static javafx.scene.paint.Color.RED;
+import static javafx.scene.paint.Color.WHITE;
 
 public class EDITVController implements AppContact {
 
@@ -32,6 +36,7 @@ public class EDITVController implements AppContact {
     public TextField phonenr;
     public TextField address;
     public String name;
+    public Label notfound;
 
     public void search(MouseEvent mouseEvent) throws IOException {
 
@@ -48,7 +53,13 @@ public class EDITVController implements AppContact {
                 email.setPromptText(s = br.readLine());
                 phonenr.setPromptText(s = br.readLine());
                 address.setPromptText(s = br.readLine());
-
+                notfound.setText("  ");
+                notfound.setTextFill(WHITE);
+                break;
+            }
+            else{
+                notfound.setText("Person not found in system");
+                notfound.setTextFill(RED);
             }
         }
         br.close();

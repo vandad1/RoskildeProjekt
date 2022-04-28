@@ -26,12 +26,13 @@ public class LogInRController implements AppContact {
 
     public TextField username;
     public PasswordField password;
+    public static String usernameuse;
 
 
     public void logininfo(MouseEvent mouseEvent) throws IOException {
 
         String passworduse = password.getText();
-        String usernameuse = username.getText();
+        usernameuse = username.getText();
 
 
         File responsibleData = new File("ResponsibleData.txt");
