@@ -19,11 +19,6 @@
          <Button layoutX="236.0" layoutY="172.0" mnemonicParsing="false" onMouseClicked="#EDITVOLUNTEER" prefHeight="27.0" prefWidth="128.0" text="Edit Volunteer" />
          <Button layoutX="237.0" layoutY="214.0" mnemonicParsing="false" onMouseClicked="#CreateShift" prefHeight="23.0" prefWidth="126.0" text="Create Shift" />
          <Button layoutX="238.0" layoutY="258.0" mnemonicParsing="false" onMouseClicked="#EditShift" prefHeight="22.0" prefWidth="124.0" text="Edit Shift" />
-         <Label fx:id="loginname" layoutX="102.0" layoutY="19.0" prefHeight="18.0" prefWidth="96.0" text="    ">
-            <font>
-               <Font size="14.0" />
-            </font>
-         </Label>
       </children>
 </AnchorPane>
 </Scene>

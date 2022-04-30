@@ -50,7 +50,11 @@ public class CreateShiftsController implements AppContact{
             }
 
         }
+    }
 
+
+    public void submitS(MouseEvent mouseEvent) throws IOException{
+        String filename = "VolunteerData.txt";
 
     }
 }
