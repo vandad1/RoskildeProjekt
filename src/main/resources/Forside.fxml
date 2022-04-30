@@ -2,7 +2,6 @@
 
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
@@ -11,7 +10,6 @@
         <style> -fx-background-image: url("https://www.sdu.dk/-/media/images/nyheder_sduk/nyheder2020/opengraphimage/roskildefestival-flemming-bo-jensen-1200x630.jpg");
             -fx-background-size: cover, auto;
         </style>
-
 
         <children>
             <Label layoutX="256.0" layoutY="122.0" prefHeight="34.0" prefWidth="93.0" text="Log in as" textFill="WHITE">
@@ -36,11 +34,8 @@
             <cursor>
                <Cursor fx:constant="HAND" />
             </cursor></Button>
-         <ImageView fitHeight="55.0" fitWidth="113.0" layoutX="6.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../../../../../Downloads/foreningen_orange.png" />
-            </image>
-         </ImageView>
          <TextFlow prefHeight="200.0" prefWidth="200.0" />
+
+
         </children></AnchorPane>
 </Scene>
