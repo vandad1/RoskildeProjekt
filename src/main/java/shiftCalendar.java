@@ -82,7 +82,7 @@ class shiftCalendar extends BorderPane {
     }
 
     private String getMonthName(int n) {
-        String[] monthNames = {"January", "February", "March", "April", "May", "June", "July", "August","September","October","November","December"};
+        String[] monthNames = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
         return monthNames[n];
     }
 
