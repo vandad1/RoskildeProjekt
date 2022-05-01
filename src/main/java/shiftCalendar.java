@@ -1,23 +1,12 @@
-import com.sun.glass.ui.*;
-import com.sun.glass.ui.Cursor;
-import com.sun.glass.ui.Window;
 import javafx.geometry.Pos;
-import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import javafx.stage.Stage;
 import org.w3c.dom.Text;
 
 import java.awt.*;
-import java.io.File;
-import java.nio.ByteBuffer;
-import java.nio.IntBuffer;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-
-import static java.time.temporal.TemporalAdjusters.next;
-import static javafx.application.Application.launch;
 
 class shiftCalendar extends BorderPane {
     private Calendar currentMonth;
