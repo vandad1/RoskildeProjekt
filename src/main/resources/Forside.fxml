@@ -36,9 +36,9 @@
                <Cursor fx:constant="HAND" />
             </cursor></Button>
          <TextFlow prefHeight="200.0" prefWidth="200.0" />
-         <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="203.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../../../WW_explore_collab_wide_Roskilde_desktop.png" />
+               <Image url="@WW_explore_collab_wide_Roskilde_desktop.png" />
             </image>
          </ImageView>
 
