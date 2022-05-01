@@ -89,13 +89,11 @@ public class CreateShiftsController implements AppContact{
                     bw.write(s + "\n");
                 }
                 s = br.readLine();
-                if(s != ""){
-                    if(s.charAt(0) == '2'){
-                        bw.write(s + "  " + dato + ", " + task1 + ", " + timer + "\n");
-                    }
-                    else{
-                        bw.write(dato + ", " + task1 + ", " + timer + "\n");
-                    }
+                if(s.equals("")){
+                    bw.write(dato + ", " + task1 + ", " + timer + "\n");
+                }
+                else{
+                    bw.write(s + "  -  " + dato + ", " + task1 + ", " + timer + "\n");
                 }
 
             }
