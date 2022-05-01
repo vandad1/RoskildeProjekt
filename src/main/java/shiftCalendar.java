@@ -1,4 +1,5 @@
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
@@ -10,6 +11,7 @@ import java.util.GregorianCalendar;
 
 class shiftCalendar extends BorderPane {
     private Calendar currentMonth;
+    private int DayOfWeek;
 
     public shiftCalendar() {
         currentMonth = new GregorianCalendar();
@@ -96,7 +98,7 @@ class shiftCalendar extends BorderPane {
         //Days of the week:
         for (int day = 1; day <= 7; day++) {
             Text nameDay = new Text(getNameDay(day));
-            gridBody.add(nameDay, day - 1, 0);
+            gridBody.add((Node) nameDay, day - 1, 0);
         }
 
         //Days of month:
@@ -111,6 +113,7 @@ class shiftCalendar extends BorderPane {
             }
 
             Text dateT = new Text(String.valueOf(currentDay));
+            Node tDate = null;
             gridBody.add(tDate, DayOfWeek - 1, row);
             currentDay++;
             dayOfWeek++;
@@ -124,7 +127,7 @@ class shiftCalendar extends BorderPane {
             for (int i = dayOfWeek - 2; i >= 0; i--) {
                 Text dateT = new Text(String.valueOf(daysInMonthPrev));
                 dateT.setFill(Color.GRAY);
-                gridBody.add(dateT, i, 1);
+                gridBody.add((Node) dateT, i, 1);
                 daysInMonthPrev--;
             }
         }
@@ -137,7 +140,7 @@ class shiftCalendar extends BorderPane {
             for (int i = dayOfWeek; i < 7; i++) {
                 Text dateT = new Text(String.valueOf(day));
                 dateT.setFill(Color.GRAY);
-                gridBody.add(dateT, i, row);
+                gridBody.add((Node) dateT, i, row);
                 day++;
             }
         }
@@ -151,8 +154,8 @@ class shiftCalendar extends BorderPane {
         String yearString = String.valueOf(currentMonth.get(Calendar.YEAR));
         Text tHeader = new Text(monthString + ", " + yearString);
 
-        setTop(tHeader);
-        setAlignment(tHeader, Pos.CENTER);
+        setTop((Node) tHeader);
+        setAlignment((Node) tHeader, Pos.CENTER);
         setMargin(tHeader, new Insets(15));
     }
 }
