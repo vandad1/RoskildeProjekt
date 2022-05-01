@@ -41,7 +41,7 @@
                <Image url="@WW_explore_collab_wide_Roskilde_desktop.png" />
             </image>
          </ImageView>
-         <ImageView fitHeight="49.0" fitWidth="109.0" layoutX="14.0" layoutY="337.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView fitHeight="64.0" fitWidth="115.0" layoutX="14.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="@foreningen_orange.png" />
             </image>
