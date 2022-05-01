@@ -8,37 +8,42 @@
 
 <Scene xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ForsideController">
     <AnchorPane prefHeight="400.0" prefWidth="600.0">
-        <style> -fx-background-image: url("https://www.sdu.dk/-/media/images/nyheder_sduk/nyheder2020/opengraphimage/roskildefestival-flemming-bo-jensen-1200x630.jpg");
+        <style> -fx-background-image: url("https://meyersound.com/wp-content/uploads/2017/09/roskilde_festival_008.jpg");
             -fx-background-size: cover, auto;
         </style>
 
         <children>
-            <Label layoutX="256.0" layoutY="122.0" prefHeight="34.0" prefWidth="93.0" text="Log in as" textFill="WHITE">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="221.0" layoutY="156.0" prefHeight="44.0" prefWidth="158.0" text="Log in as" textFill="WHITE">
                 <font>
-                    <Font size="24.0" />
+                    <Font size="36.0" />
                 </font>
             <cursor>
                <Cursor fx:constant="TEXT" />
             </cursor>
             </Label>
-            <Button alignment="CENTER" blendMode="SRC_ATOP" layoutX="219.0" layoutY="173.0" mnemonicParsing="false" onMouseClicked="#LogInR" prefHeight="54.0" prefWidth="167.0" style="-fx-background-color: 0;" text="R e s p o n s i b l e" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" underline="true">
+            <Button alignment="CENTER" blendMode="SRC_ATOP" layoutX="192.0" layoutY="214.0" mnemonicParsing="false" onMouseClicked="#LogInR" prefHeight="54.0" prefWidth="219.0" style="-fx-background-color: 0;" text="R e s p o n s i b l e " textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
                 <font>
-                    <Font name="System Bold" size="19.0" />
+                    <Font name="System Bold" size="24.0" />
                 </font>
             <cursor>
                <Cursor fx:constant="HAND" />
             </cursor></Button>
-            <Button layoutX="219.0" layoutY="236.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="167.0" style="-fx-background-color: 0;" text="V o l u n t e e r" textFill="WHITE" textOverrun="CLIP" underline="true">
+            <Button layoutX="211.0" layoutY="268.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="181.0" style="-fx-background-color: 0;" text="V o l u n t e e r" textFill="WHITE" textOverrun="CLIP">
                 <font>
-                    <Font name="System Bold Italic" size="19.0" />
+                    <Font name="System Bold Italic" size="24.0" />
                 </font>
             <cursor>
                <Cursor fx:constant="HAND" />
             </cursor></Button>
          <TextFlow prefHeight="200.0" prefWidth="200.0" />
-         <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView fitHeight="130.0" fitWidth="233.0" layoutX="185.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="@WW_explore_collab_wide_Roskilde_desktop.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="49.0" fitWidth="109.0" layoutX="14.0" layoutY="337.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@foreningen_orange.png" />
             </image>
          </ImageView>
 
