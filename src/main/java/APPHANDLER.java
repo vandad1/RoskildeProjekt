@@ -70,5 +70,28 @@ public class APPHANDLER extends Application {
         changescnen("RESPONSIBLE_MENU.fxml");
     }
 
+    public void loginV() throws IOException{
+        changescnen("LogInV.fxml");
+    }
+
+    public void OpenStartV() throws IOException{
+        changescnen("VOLUNTEER_MENU.fxml");
+    }
+
+    public void MyInfo() throws IOException{
+        changescnen("MyInfo.fxml");
+    }
+
+    public void GoBackToVMenu() throws IOException{
+        changescnen("VOLUNTEER_MENU.fxml");
+    }
+
+    public void MyCalender() throws IOException{
+        changescnen("myCalender.fxml");
+    }
+
+
+
+
 
 }

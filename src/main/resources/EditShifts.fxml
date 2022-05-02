@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.text.Font?>
 <Scene xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EditShiftsController">
 <AnchorPane prefHeight="400.0" prefWidth="600.0">
+    <style> -fx-background-image: url("https://mh-2-billedbureau.panthermedia.net/media/media_detail/0011000000/11095000/~hvid-baggrund-og-skr%C3%A5nende-bl%C3%A5-linjer_11095168_detail.jpg");
+        -fx-background-size: cover, auto;
+    </style>
     <children>
         <Label layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="88.0" text="Logged in as: ">
             <font>
                 <Font size="14.0" />
             </font>
         </Label>
-        <Button layoutX="528.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#logout" text="Log out" />
-        <Button layoutX="14.0" layoutY="40.0" mnemonicParsing="false" onMouseClicked="#GoBackMenuR" text="←">
+        <Button layoutX="528.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#logout" style="-fx-background-color: 0;" text="L o g  o u t" />
+        <Button layoutX="14.0" layoutY="40.0" mnemonicParsing="false" onMouseClicked="#GoBackMenuR" style="-fx-background-color: 0;" text="←">
             <font>
                 <Font name="System Bold" size="12.0" />
             </font>

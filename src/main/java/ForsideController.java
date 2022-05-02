@@ -24,4 +24,12 @@ public class ForsideController implements AppContact {
     public void LogInR(MouseEvent mouseEvent) throws IOException {
         app.loginR();
     }
+
+
+    public void LogInV(MouseEvent mouseEvent) throws IOException{
+        app.loginV();
+    }
+
+
+
 }
