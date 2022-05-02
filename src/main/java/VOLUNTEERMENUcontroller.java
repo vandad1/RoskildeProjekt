@@ -29,7 +29,7 @@ public class VOLUNTEERMENUcontroller implements AppContact{
     }
 
     public void contactR(MouseEvent mouseEvent) throws IOException{
-
+        app.ContactR();
     }
 
 

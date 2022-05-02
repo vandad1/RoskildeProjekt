@@ -39,7 +39,7 @@
                <Font size="14.0" />
             </font>
          </Label>
-         <Label layoutX="213.0" layoutY="120.0" prefHeight="34.0" prefWidth="174.0" text="NAVN">
+         <Label fx:id="name" layoutX="213.0" layoutY="120.0" prefHeight="34.0" prefWidth="174.0" text="*********">
             <font>
                <Font size="14.0" />
             </font>
@@ -49,7 +49,7 @@
                <Font size="14.0" />
             </font>
          </Label>
-         <Label layoutX="211.0" layoutY="173.0" prefHeight="18.0" prefWidth="178.0" text="EMAIL">
+         <Label fx:id="email" layoutX="211.0" layoutY="173.0" prefHeight="18.0" prefWidth="178.0" text="**********">
             <font>
                <Font size="14.0" />
             </font>
@@ -59,7 +59,7 @@
                <Font size="14.0" />
             </font>
          </Label>
-         <Label layoutX="211.0" layoutY="223.0" prefHeight="18.0" prefWidth="137.0" text="PHONENR">
+         <Label fx:id="phone" layoutX="211.0" layoutY="223.0" prefHeight="18.0" prefWidth="137.0" text="**********">
             <font>
                <Font size="14.0" />
             </font>
@@ -69,12 +69,17 @@
                <Font size="14.0" />
             </font>
          </Label>
-         <Label layoutX="211.0" layoutY="272.0" prefHeight="18.0" prefWidth="146.0" text="ADDRESS">
+         <Label fx:id="address" layoutX="211.0" layoutY="272.0" prefHeight="18.0" prefWidth="146.0" text="**********">
             <font>
                <Font size="14.0" />
             </font>
          </Label>
-         <Button layoutX="52.0" layoutY="326.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" text="Change Password">
+         <Button layoutX="196.0" layoutY="326.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" text="Change Password">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Button>
+         <Button onMouseClicked="#show" layoutX="48.0" layoutY="325.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="134.0" text="Show information">
             <font>
                <Font size="14.0" />
             </font>

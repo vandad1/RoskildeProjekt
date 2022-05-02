@@ -36,11 +36,12 @@ public class CreateVController implements AppContact {
     public Label missing;
     public Label auto;
     public Label password;
+    public static String name1;
 
 
 
     public void submit(MouseEvent mouseEvent) throws IOException {
-        String name1 = name.getText();
+        name1 = name.getText();
         String email1 = email.getText();
         String phonenr1 = phonenr.getText();
         String address1 = address.getText();

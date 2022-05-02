@@ -23,6 +23,7 @@ public class LogInVController implements AppContact{
     public TextField username;
     public PasswordField password;
     public Label login;
+    public static String usernameuse;
 
 
 
@@ -33,7 +34,7 @@ public class LogInVController implements AppContact{
 
     public void logininfo(MouseEvent mouseEvent) throws IOException{
         String passworduse = password.getText();
-        String usernameuse = username.getText();
+        usernameuse = username.getText();
 
 
         File VolunteerData = new File("VolunteerData.txt");

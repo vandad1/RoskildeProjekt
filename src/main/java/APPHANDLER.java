@@ -70,6 +70,14 @@ public class APPHANDLER extends Application {
         changescnen("RESPONSIBLE_MENU.fxml");
     }
 
+    public void CreateBod() throws IOException{
+        changescnen("CreateBod.fxml");
+    }
+
+    public void CheckUp() throws IOException{
+        changescnen("CheckUp.fxml");
+    }
+
     public void loginV() throws IOException{
         changescnen("LogInV.fxml");
     }
@@ -88,6 +96,10 @@ public class APPHANDLER extends Application {
 
     public void MyCalender() throws IOException{
         changescnen("myCalender.fxml");
+    }
+
+    public void ContactR() throws IOException{
+        changescnen("contactR.fxml");
     }
 
 

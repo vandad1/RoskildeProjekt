@@ -15,10 +15,8 @@ import static javafx.scene.paint.Color.BLACK;
 public class RESPONSIBLEMENUcontroller extends LogInRController implements AppContact {
 
 
-
     @FXML
     private APPHANDLER app;
-
 
     @FXML
     @Override
@@ -47,6 +45,13 @@ public class RESPONSIBLEMENUcontroller extends LogInRController implements AppCo
         app.EditShifts();
     }
 
+    public void CreateBOD(MouseEvent mouseEvent) throws IOException{
+        app.CreateBod();
+    }
+
+    public void CheckUp(MouseEvent mouseEvent) throws IOException{
+        app.CheckUp();
+    }
 
 
 }

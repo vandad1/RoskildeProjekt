@@ -6,8 +6,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+
 <?import javafx.scene.text.Font?>
-    <Scene xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MyCalendercontroller">
+<Scene xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ContactRcontroller">
     <AnchorPane prefHeight="400.0" prefWidth="600.0">
         <children>
             <Label layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="88.0" text="Logged in as: ">
@@ -30,4 +31,4 @@
 
         </children>
     </AnchorPane>
-    </Scene>
+</Scene>

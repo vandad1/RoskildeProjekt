@@ -13,8 +13,6 @@ import static javafx.scene.paint.Color.RED;
 
 public class CreateShiftsController implements AppContact{
 
-
-
     @FXML
     private APPHANDLER app;
 
@@ -36,6 +34,7 @@ public class CreateShiftsController implements AppContact{
     public DatePicker date;
     public TextField hours;
     public TextField task;
+    public TextField stall;
 
     public void confirm(MouseEvent mouseEvent) throws IOException{
 
@@ -70,16 +69,27 @@ public class CreateShiftsController implements AppContact{
         LocalDate dato = date.getValue();
         String task1 = task.getText();
         String timer = hours.getText();
+        String stall1 = stall.getText();
 
-        String tempfile = "temp.txt";
-        File newfile = new File(tempfile);
+        File newfile = new File("temp.txt");
         File oldfile = new File(filename);
 
-        FileWriter fw = new FileWriter(tempfile, true);
+        FileWriter fw = new FileWriter(newfile, true);
         BufferedWriter bw = new BufferedWriter(fw);
         PrintWriter pw = new PrintWriter(bw);
         BufferedReader br = new BufferedReader(new FileReader(oldfile));
         String s;
+
+        File newfileRESPONSIBLE = new File("tempRESPONSIBLE.txt");
+        File oldfileRESPONSIBLE = new File("ResponsibleData.txt");
+
+        FileWriter fw2 = new FileWriter(newfile, true);
+        BufferedWriter bw2 = new BufferedWriter(fw2);
+        PrintWriter pw2 = new PrintWriter(bw2);
+        BufferedReader br2 = new BufferedReader(new FileReader(oldfile));
+        String R;
+
+
 
         while((s = br.readLine()) != null){
             if(s.equals(name)){
@@ -90,10 +100,12 @@ public class CreateShiftsController implements AppContact{
                 }
                 s = br.readLine();
                 if(s.equals("")){
-                    bw.write(dato + ", " + task1 + ", " + timer + "\n");
+                    //**************************
+                    bw.write(dato + ", " + stall1 + ", " + task1 + ", " + timer + "\n");
                 }
                 else{
-                    bw.write(s + "  -  " + dato + ", " + task1 + ", " + timer + "\n");
+                    //**************************
+                    bw.write(s + "  -  " + dato + ", " + stall1 + ", " + task1 + ", " + timer + "\n");
                 }
 
             }
