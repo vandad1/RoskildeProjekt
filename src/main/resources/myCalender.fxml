@@ -16,7 +16,7 @@
                 <Font size="14.0" />
             </font>
         </Label>
-        <Button layoutX="528.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#logout" style="-fx-background-color: 0;" text="L o g  o u t ti" textFill="BLACK">
+        <Button layoutX="528.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#logout" style="-fx-background-color: 0;" text="L o g  o u t " textFill="BLACK">
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor>
@@ -31,7 +31,7 @@
                <Cursor fx:constant="HAND" />
             </cursor>
         </Button>
-         <ChoiceBox fx:id="Timepicker" layoutX="212.0" layoutY="175.0" opacity="0.8" prefHeight="16.0" prefWidth="63.0" />
+         <ChoiceBox fx:id="timepicker" layoutX="212.0" layoutY="175.0" opacity="0.8" prefHeight="16.0" prefWidth="63.0" />
          <DatePicker fx:id="DatePicker" layoutX="15.0" layoutY="176.0" style="-fx-background-color: 0;" />
          <Label alignment="CENTER" layoutY="70.0" prefHeight="18.0" prefWidth="604.0" text="Calendar" textAlignment="CENTER">
             <font>
