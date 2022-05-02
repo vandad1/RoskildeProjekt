@@ -23,17 +23,17 @@
             <font>
                 <Font size="14.0" />
             </font></Button>
-         <Button onMouseClicked="#myinfo" layoutX="102.0" layoutY="135.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="156.0" text="My information">
+         <Button layoutX="102.0" layoutY="135.0" mnemonicParsing="false" onMouseClicked="#myinfo" prefHeight="38.0" prefWidth="156.0" text="My information">
             <font>
                <Font size="14.0" />
             </font>
          </Button>
-         <Button onMouseClicked="#mycalender" layoutX="104.0" layoutY="193.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="152.0" text="My calender">
+         <Button layoutX="104.0" layoutY="193.0" mnemonicParsing="false" onMouseClicked="#mycalender" prefHeight="34.0" prefWidth="152.0" text="My calender">
             <font>
                <Font size="14.0" />
             </font>
          </Button>
-         <Button onMouseClicked="#contactR" layoutX="100.0" layoutY="251.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="158.0" text="Contact responsible">
+         <Button layoutX="100.0" layoutY="251.0" mnemonicParsing="false" onMouseClicked="#contactR" prefHeight="36.0" prefWidth="158.0" text="Contact responsible">
             <font>
                <Font size="14.0" />
             </font>
@@ -44,7 +44,7 @@
                <Font size="14.0" />
             </font>
          </Label>
-         <Label layoutX="399.0" layoutY="185.0" prefHeight="155.0" prefWidth="199.0" text="Label">
+         <Label fx:id="shifts" layoutX="399.0" layoutY="185.0" prefHeight="155.0" prefWidth="199.0" text="">
             <font>
                <Font size="14.0" />
             </font>

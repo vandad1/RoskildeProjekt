@@ -8,6 +8,7 @@ import java.awt.*;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
+/*
 class shiftCalendar extends BorderPane {
     private Calendar currentMonth;
 
@@ -156,4 +157,6 @@ class shiftCalendar extends BorderPane {
         setMargin(tHeader, new Insets(15));
     }
 }
+
+ */
 

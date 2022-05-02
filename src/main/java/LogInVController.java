@@ -22,7 +22,6 @@ public class LogInVController implements AppContact{
 
     public TextField username;
     public PasswordField password;
-    public static String usernameuse;
     public Label login;
 
 
@@ -34,19 +33,22 @@ public class LogInVController implements AppContact{
 
     public void logininfo(MouseEvent mouseEvent) throws IOException{
         String passworduse = password.getText();
-        usernameuse = username.getText();
+        String usernameuse = username.getText();
 
 
-        File responsibleData = new File("ResponsibleData.txt");
+        File VolunteerData = new File("VolunteerData.txt");
 
-        BufferedReader rd = new BufferedReader(new FileReader(responsibleData));
+        BufferedReader rd = new BufferedReader(new FileReader(VolunteerData));
 
         String s;
         while ((s = rd.readLine()) != null) {
 
             if (s.equals(usernameuse)) {
 
-                s = rd.readLine();
+                for(int i = 0; i < 3; i++){
+                    s = rd.readLine();
+                }
+
                 if (s.equals(passworduse)) {
                     app.OpenStartV();
                 } else {

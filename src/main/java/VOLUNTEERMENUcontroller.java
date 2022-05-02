@@ -1,6 +1,8 @@
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 
+import java.awt.*;
 import java.io.IOException;
 
 public class VOLUNTEERMENUcontroller implements AppContact{
@@ -18,16 +20,22 @@ public class VOLUNTEERMENUcontroller implements AppContact{
         app.logout1();
     }
 
+    public void myinfo(MouseEvent mouseEvent) throws IOException{
+        app.MyInfo();
+    }
 
-    public void myinfo(MouseEvent mouseEvent) {
+    public void mycalender(MouseEvent mouseEvent) throws IOException{
+        app.MyCalender();
+    }
+
+    public void contactR(MouseEvent mouseEvent) throws IOException{
 
     }
 
-    public void mycalender(MouseEvent mouseEvent) {
 
-    }
+    public Label shifts;
 
-    public void contactR(MouseEvent mouseEvent) {
 
-    }
+
+
 }
