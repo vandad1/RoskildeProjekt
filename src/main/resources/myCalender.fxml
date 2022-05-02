@@ -16,7 +16,7 @@
                 <Font size="14.0" />
             </font>
         </Label>
-        <Button layoutX="528.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#logout" style="-fx-background-color: 0;" text="L o g  o u t tis" textFill="BLACK">
+        <Button layoutX="528.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#logout" style="-fx-background-color: 0;" text="L o g  o u t ti" textFill="BLACK">
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor>
