@@ -1,11 +1,11 @@
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.*;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+
 
 import java.io.IOException;
 import java.net.URL;
@@ -18,7 +18,7 @@ public class EditShiftsController implements AppContact {
     public APPHANDLER app;
 
     @FXML
-    public TableView<User> Table;
+    public TableView<User> table;
 
     @FXML
     public TableColumn<User, String> task;
@@ -28,7 +28,6 @@ public class EditShiftsController implements AppContact {
 
     @FXML
     public TableColumn<User, String> time;
-
 
     @FXML
     public void GoBackMenuR(MouseEvent mouseEvent) throws IOException {
@@ -44,17 +43,16 @@ public class EditShiftsController implements AppContact {
     ObservableList<User> List = FXCollections.observableArrayList(
             new User("Goere rent", "05/03/2022", "15:00 - 19:00"),
             new User("Rens", "05/03/2022", "15:00 - 20:00"),
-            new User("Hotdog service","05/03/2022","20:00 - 24:00")
+            new User("Hotdog service", "05/03/2022", "20:00 - 24:00")
     );
 
 
-    @FXML
-    public void Initialize(URL url, ResourceBundle resourceBundle) {
-        task.setCellValueFactory(new PropertyValueFactory<User, String>("shiftTask"));
-        date.setCellValueFactory(new PropertyValueFactory<User, String>("shiftDate"));
-        time.setCellValueFactory(new PropertyValueFactory<User, String>("shiftTime"));
+    public void CellValue(URL url, ResourceBundle resourceBundle) {
+        task.setCellValueFactory(new PropertyValueFactory<User, String>("task"));
+        date.setCellValueFactory(new PropertyValueFactory<User, String>("date"));
+        time.setCellValueFactory(new PropertyValueFactory<User, String>("time"));
 
-        Table.setItems(List);
+        table.setItems(List);
     }
 
     @Override

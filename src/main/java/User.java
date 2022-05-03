@@ -1,7 +1,7 @@
 public class User {
-    public String task;
-    public String date;
-    public String time;
+    private String task;
+    private String date;
+    private String time;
 
     public User(String task, String date, String time) {
         this.task = task;
@@ -9,15 +9,15 @@ public class User {
         this.time = time;
     }
 
-    public String task() {
+    public String getTask() {
         return task;
     }
 
-    public String date() {
+    public String getDate() {
         return date;
     }
 
-    public String time() {
+    public String getTime() {
         return time;
     }
 }
