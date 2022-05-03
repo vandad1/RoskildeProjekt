@@ -9,7 +9,7 @@ import javafx.scene.input.MouseEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class EditShiftsController implements Initializable {
+public class EditShiftsController implements AppContact {
 
     @FXML
     private TextField editShift;
@@ -44,8 +44,9 @@ public class EditShiftsController implements Initializable {
     ObservableList<User> List = FXCollections.observableArrayList(
             new User("Goere rent", "05/03/2022", "15:0019:00"));
 
+
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void setApp(APPHANDLER app) {
         shiftDate.setCellValueFactory(new PropertyValueFactory<User, String>("shiftDate"));
         shiftTask.setCellValueFactory(new PropertyValueFactory<User, String>("shiftTask"));
         shiftTime.setCellValueFactory(new PropertyValueFactory<User, String>("shiftTime"));

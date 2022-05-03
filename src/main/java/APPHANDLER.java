@@ -95,10 +95,6 @@ public class APPHANDLER extends Application {
         changescnen("VOLUNTEER_MENU.fxml");
     }
 
-    public void MyCalender() throws IOException {
-        changescnen("myCalender.fxml");
-    }
-
     public void ContactR() throws IOException {
         changescnen("contactR.fxml");
     }
