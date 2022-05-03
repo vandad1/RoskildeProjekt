@@ -1,23 +1,23 @@
 public class User {
-    public String shiftTask;
-    public String shiftDate;
-    public String shiftTime;
+    public String task;
+    public String date;
+    public String time;
 
-    public User(String shiftTask, String shiftDate, String shiftTime) {
-        this.shiftTask = shiftTask;
-        this.shiftDate = shiftDate;
-        this.shiftTime = shiftTime;
+    public User(String Task, String Date, String Time) {
+        this.task = task;
+        this.date = date;
+        this.time = time;
     }
 
-    public String getShiftTask() {
-        return shiftTask;
+    public String Task() {
+        return task;
     }
 
-    public String getShiftDate() {
-        return shiftDate;
+    public String Date() {
+        return date;
     }
 
-    public String getShiftTime() {
-        return shiftTime;
+    public String Time() {
+        return time;
     }
 }

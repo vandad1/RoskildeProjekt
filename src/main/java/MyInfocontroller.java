@@ -6,6 +6,9 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 
 public class MyInfocontroller implements AppContact {
 
@@ -17,6 +20,7 @@ public class MyInfocontroller implements AppContact {
     public void setApp(APPHANDLER apphandler) {
         this.app = apphandler;
     }
+
 
 
     public void logout(MouseEvent mouseEvent) throws IOException {
