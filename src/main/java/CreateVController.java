@@ -72,11 +72,15 @@ public class CreateVController implements AppContact {
 
 
             password.setText(String.valueOf(pass));
-            bw.close();
+
             auto.setText("Auto Generated Password:");
 
             missing.setTextFill(GREEN);
             missing.setText("Volunteer Created Succesfully!");
+
+            bw.close();
+            pw.close();
+
 
         }
 

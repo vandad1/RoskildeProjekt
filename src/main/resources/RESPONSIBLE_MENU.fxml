@@ -39,21 +39,21 @@
             <font>
                <Font size="18.0" />
             </font></Button>
-         <Button contentDisplay="BOTTOM" graphicTextGap="9.0" layoutX="222.0" layoutY="105.0" mnemonicParsing="false" onMouseClicked="#EDITVOLUNTEER" prefHeight="28.0" prefWidth="162.0" style="-fx-background-color: 0;" text="Edit Volunteer" textFill="WHITE" underline="true">
+         <Button contentDisplay="BOTTOM" graphicTextGap="9.0" layoutX="226.0" layoutY="151.0" mnemonicParsing="false" onMouseClicked="#EDITVOLUNTEER" prefHeight="28.0" prefWidth="162.0" style="-fx-background-color: 0;" text="Edit Volunteer" textFill="WHITE" underline="true">
             <cursor>
                <Cursor fx:constant="HAND" />
             </cursor>
             <font>
                <Font size="18.0" />
             </font></Button>
-         <Button layoutX="222.0" layoutY="145.0" mnemonicParsing="false" onMouseClicked="#CreateShift" prefHeight="28.0" prefWidth="162.0" style="-fx-background-color: 0;" text="Create Shift" textFill="WHITE" underline="true">
+         <Button layoutX="226.0" layoutY="223.0" mnemonicParsing="false" onMouseClicked="#CreateShift" prefHeight="28.0" prefWidth="162.0" style="-fx-background-color: 0;" text="Create Shift" textFill="WHITE" underline="true">
             <cursor>
                <Cursor fx:constant="HAND" />
             </cursor>
             <font>
                <Font size="18.0" />
             </font></Button>
-         <Button layoutX="222.0" layoutY="191.0" mnemonicParsing="false" onMouseClicked="#EditShift" prefHeight="28.0" prefWidth="162.0" style="-fx-background-color: 0;" text="Edit Shift" textFill="WHITE" underline="true">
+         <Button layoutX="222.0" layoutY="313.0" mnemonicParsing="false" onMouseClicked="#EditShift" prefHeight="28.0" prefWidth="162.0" style="-fx-background-color: 0;" text="Edit Shift" textFill="WHITE" underline="true">
             <cursor>
                <Cursor fx:constant="HAND" />
             </cursor>
@@ -68,22 +68,6 @@
                <ColorAdjust brightness="1.0" />
             </effect>
          </ImageView>
-         <Button onMouseClicked="#CreateBOD" layoutX="232.0" layoutY="239.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="142.0" style="-fx-background-color: 0;" text="Create Stand" textFill="WHITE" underline="true">
-            <font>
-               <Font size="18.0" />
-            </font>
-            <cursor>
-               <Cursor fx:constant="HAND" />
-            </cursor>
-         </Button>
-         <Button onMouseClicked="#CheckUp" layoutX="183.0" layoutY="279.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="240.0" style="-fx-background-color: 0;" text="Check up on Stand" textFill="WHITE" underline="true">
-            <font>
-               <Font size="18.0" />
-            </font>
-            <cursor>
-               <Cursor fx:constant="HAND" />
-            </cursor>
-         </Button>
       </children>
 </AnchorPane>
 </Scene>

@@ -103,5 +103,7 @@ public class APPHANDLER extends Application {
         changescnen("contactR.fxml");
     }
 
-
+    public void ChangePass() throws IOException{
+        changescnen("ChangePass.fxml");
+    }
 }

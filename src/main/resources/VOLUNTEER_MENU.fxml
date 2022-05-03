@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
-<Scene xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VOLUNTEERMENUcontroller">
+<Scene xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VOLUNTEERMENUcontroller">
 <AnchorPane prefHeight="400.0" prefWidth="600.0">
     <style> -fx-background-image: url("https://browsecat.net/sites/default/files/orange-background-hd-126457-577970-1988082.png");
         -fx-background-size: cover, auto;
@@ -24,7 +26,7 @@
             <font>
                 <Font size="14.0" />
             </font></Button>
-         <Button layoutX="102.0" layoutY="135.0" mnemonicParsing="false" onMouseClicked="#myinfo" prefHeight="38.0" prefWidth="156.0" style="-fx-background-color: 0;" text="M y  i n f o r m a t i o n">
+         <Button layoutX="100.0" layoutY="166.0" mnemonicParsing="false" onMouseClicked="#myinfo" prefHeight="38.0" prefWidth="175.0" style="-fx-background-color: 0;" text="M y  i n f o r m a t i o n">
             <font>
                <Font size="14.0" />
             </font>
@@ -32,15 +34,7 @@
                <Cursor fx:constant="HAND" />
             </cursor>
          </Button>
-         <Button layoutX="104.0" layoutY="193.0" mnemonicParsing="false" onMouseClicked="#mycalender" prefHeight="37.0" prefWidth="155.0" style="-fx-background-color: 0;" text="M y  c a l e n d e r">
-            <font>
-               <Font size="14.0" />
-            </font>
-            <cursor>
-               <Cursor fx:constant="HAND" />
-            </cursor>
-         </Button>
-         <Button layoutX="86.0" layoutY="245.0" mnemonicParsing="false" onMouseClicked="#contactR" prefHeight="36.0" prefWidth="192.0" style="-fx-background-color: 0;" text="C o n t a c t  r e s p o n s i b l e">
+         <Button layoutX="78.0" layoutY="227.0" mnemonicParsing="false" onMouseClicked="#contactR" prefHeight="36.0" prefWidth="218.0" style="-fx-background-color: 0;" text="C o n t a c t  r e s p o n s i b l e">
             <font>
                <Font size="14.0" />
             </font>

@@ -37,52 +37,37 @@
             </font>
          </Label>
          <Line endX="100.0" layoutX="144.0" layoutY="106.0" startX="-100.0" />
-         <Label layoutX="52.0" layoutY="127.0" prefHeight="20.0" prefWidth="64.0" text="Name:">
+         <Label layoutX="48.0" layoutY="124.0" prefHeight="18.0" prefWidth="70.0" text="Email:">
             <font>
                <Font size="14.0" />
             </font>
          </Label>
-         <Label fx:id="name" layoutX="213.0" layoutY="120.0" prefHeight="34.0" prefWidth="174.0" text="*********">
+         <Label fx:id="email" layoutX="206.0" layoutY="124.0" prefHeight="18.0" prefWidth="178.0" text="********">
             <font>
                <Font size="14.0" />
             </font>
          </Label>
-         <Label layoutX="52.0" layoutY="173.0" prefHeight="18.0" prefWidth="70.0" text="Email:">
+         <Label layoutX="48.0" layoutY="168.0" prefHeight="18.0" prefWidth="83.0" text="Phonenr:">
             <font>
                <Font size="14.0" />
             </font>
          </Label>
-         <Label fx:id="email" layoutX="211.0" layoutY="173.0" prefHeight="18.0" prefWidth="178.0" text="**********">
+         <Label fx:id="phone" layoutX="206.0" layoutY="168.0" prefHeight="18.0" prefWidth="137.0" text="********">
             <font>
                <Font size="14.0" />
             </font>
          </Label>
-         <Label layoutX="52.0" layoutY="222.0" prefHeight="18.0" prefWidth="83.0" text="Phonenr:">
+         <Label layoutX="48.0" layoutY="209.0" prefHeight="18.0" prefWidth="111.0" text="Address:">
             <font>
                <Font size="14.0" />
             </font>
          </Label>
-         <Label fx:id="phone" layoutX="211.0" layoutY="223.0" prefHeight="18.0" prefWidth="137.0" text="**********">
+         <Label fx:id="address" layoutX="206.0" layoutY="209.0" prefHeight="18.0" prefWidth="146.0" text="********">
             <font>
                <Font size="14.0" />
             </font>
          </Label>
-         <Label layoutX="52.0" layoutY="270.0" prefHeight="18.0" prefWidth="111.0" text="Address:">
-            <font>
-               <Font size="14.0" />
-            </font>
-         </Label>
-         <Label fx:id="address" layoutX="211.0" layoutY="272.0" prefHeight="18.0" prefWidth="146.0" text="**********">
-            <font>
-               <Font size="14.0" />
-            </font>
-         </Label>
-         <Button layoutX="196.0" layoutY="326.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" text="Change Password">
-            <font>
-               <Font size="14.0" />
-            </font>
-         </Button>
-         <Button onMouseClicked="#show" layoutX="48.0" layoutY="325.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="134.0" text="Show information">
+         <Button layoutX="43.0" layoutY="269.0" mnemonicParsing="false" onMouseClicked="#show" prefHeight="30.0" prefWidth="134.0" text="Show information">
             <font>
                <Font size="14.0" />
             </font>
