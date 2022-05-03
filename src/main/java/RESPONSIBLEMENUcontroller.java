@@ -1,15 +1,7 @@
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 
-import java.awt.*;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
-
-import static javafx.scene.paint.Color.BLACK;
-
 
 
 public class RESPONSIBLEMENUcontroller extends LogInRController implements AppContact {
@@ -45,11 +37,11 @@ public class RESPONSIBLEMENUcontroller extends LogInRController implements AppCo
         app.EditShifts();
     }
 
-    public void CreateBOD(MouseEvent mouseEvent) throws IOException{
+    public void CreateBOD(MouseEvent mouseEvent) throws IOException {
         app.CreateBod();
     }
 
-    public void CheckUp(MouseEvent mouseEvent) throws IOException{
+    public void CheckUp(MouseEvent mouseEvent) throws IOException {
         app.CheckUp();
     }
 

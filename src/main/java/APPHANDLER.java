@@ -2,6 +2,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 
 
@@ -22,7 +23,7 @@ public class APPHANDLER extends Application {
     }
 
 
-    public void changescnen (String gui) throws IOException {
+    public void changescnen(String gui) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource(gui));
         Scene load = loader.load();
         AppContact controller = (AppContact) loader.getController();
@@ -70,40 +71,37 @@ public class APPHANDLER extends Application {
         changescnen("RESPONSIBLE_MENU.fxml");
     }
 
-    public void CreateBod() throws IOException{
+    public void CreateBod() throws IOException {
         changescnen("CreateBod.fxml");
     }
 
-    public void CheckUp() throws IOException{
+    public void CheckUp() throws IOException {
         changescnen("CheckUp.fxml");
     }
 
-    public void loginV() throws IOException{
+    public void loginV() throws IOException {
         changescnen("LogInV.fxml");
     }
 
-    public void OpenStartV() throws IOException{
+    public void OpenStartV() throws IOException {
         changescnen("VOLUNTEER_MENU.fxml");
     }
 
-    public void MyInfo() throws IOException{
+    public void MyInfo() throws IOException {
         changescnen("MyInfo.fxml");
     }
 
-    public void GoBackToVMenu() throws IOException{
+    public void GoBackToVMenu() throws IOException {
         changescnen("VOLUNTEER_MENU.fxml");
     }
 
-    public void MyCalender() throws IOException{
+    public void MyCalender() throws IOException {
         changescnen("myCalender.fxml");
     }
 
-    public void ContactR() throws IOException{
+    public void ContactR() throws IOException {
         changescnen("contactR.fxml");
     }
-
-
-
 
 
 }

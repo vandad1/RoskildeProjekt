@@ -3,12 +3,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
-import java.awt.*;
 import java.io.*;
 
 import static javafx.scene.paint.Color.GREEN;
 
-public class CreateBodcontroller implements AppContact{
+public class CreateBodcontroller implements AppContact {
 
 
     @FXML
@@ -25,7 +24,7 @@ public class CreateBodcontroller implements AppContact{
         app.logout1();
     }
 
-    public void GoBackMenuR(MouseEvent mouseEvent) throws IOException{
+    public void GoBackMenuR(MouseEvent mouseEvent) throws IOException {
         app.GoBackToRmenu();
     }
 
@@ -55,21 +54,19 @@ public class CreateBodcontroller implements AppContact{
         BufferedReader br = new BufferedReader(new FileReader(oldfile));
         String s;
 
-        while((s = br.readLine()) != null){
-            if(s.equals(username)){
-                for(int i = 0; i < 2; i++){
+        while ((s = br.readLine()) != null) {
+            if (s.equals(username)) {
+                for (int i = 0; i < 2; i++) {
                     bw.write(s + "\n");
                     s = br.readLine();
                 }
-                if(s.equals("")){
+                if (s.equals("")) {
                     bw.write(bodnavn + "\n");
-                }
-                else{
+                } else {
                     bw.write(s + "\n" + bodnavn + "\n");
                 }
 
-            }
-            else{
+            } else {
                 bw.write(s);
                 bw.write("\n");
             }
@@ -84,10 +81,7 @@ public class CreateBodcontroller implements AppContact{
         newfile.renameTo(dump);
 
 
-
     }
-
-
 
 
 }

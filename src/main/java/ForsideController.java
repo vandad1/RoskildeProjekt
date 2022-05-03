@@ -1,12 +1,6 @@
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 
-import java.awt.*;
 import java.io.IOException;
 
 
@@ -26,10 +20,9 @@ public class ForsideController implements AppContact {
     }
 
 
-    public void LogInV(MouseEvent mouseEvent) throws IOException{
+    public void LogInV(MouseEvent mouseEvent) throws IOException {
         app.loginV();
     }
-
 
 
 }

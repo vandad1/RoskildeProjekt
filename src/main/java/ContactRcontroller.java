@@ -3,7 +3,7 @@ import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
 
-public class ContactRcontroller implements AppContact{
+public class ContactRcontroller implements AppContact {
 
     @FXML
     private APPHANDLER app;
@@ -18,11 +18,9 @@ public class ContactRcontroller implements AppContact{
         app.logout1();
     }
 
-    public void GoBackMenuV(MouseEvent mouseEvent) throws IOException{
+    public void GoBackMenuV(MouseEvent mouseEvent) throws IOException {
         app.GoBackToVMenu();
     }
-
-
 
 
 }

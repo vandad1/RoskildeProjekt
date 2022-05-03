@@ -7,11 +7,8 @@ import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Window;
 
-import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 public class MyCalendercontroller implements AppContact {
 
@@ -31,13 +28,13 @@ public class MyCalendercontroller implements AppContact {
 
 
     @FXML
-    private void handleSaveClicked(ActionEvent event){
+    private void handleSaveClicked(ActionEvent event) {
         Window stage = vbMenu.getScene().getWindow();
         fileChooser.setTitle("Save Dialog");
         fileChooser.setInitialFileName("mysave");
         fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("text file", "*.txt"), new FileChooser.ExtensionFilter("pdf", "*.pdf"));
 
-        try{
+        try {
             File file = fileChooser.showSaveDialog(stage);
             fileChooser.setInitialDirectory(file.getParentFile());
             //TODO create load and save to file, not working as of now, just testing.
@@ -48,7 +45,7 @@ public class MyCalendercontroller implements AppContact {
     }
 
     @FXML
-    private void handleLoadClicked(ActionEvent event){
+    private void handleLoadClicked(ActionEvent event) {
         Window stage = vbMenu.getScene().getWindow();
         fileChooser.setTitle("Load Dialog");
 
@@ -57,7 +54,7 @@ public class MyCalendercontroller implements AppContact {
                 new FileChooser.ExtensionFilter("images", "*.jpg", "*gif"));
     }
 
-    private String[] time = {"8:00","10:00","12:00","14:00","16:00","18:00","20:00"};
+    private String[] time = {"8:00", "10:00", "12:00", "14:00", "16:00", "18:00", "20:00"};
 
     public MyCalendercontroller() {
     }
@@ -67,7 +64,7 @@ public class MyCalendercontroller implements AppContact {
         app.logout1();
     }
 
-    public void GoBackMenuV(MouseEvent mouseEvent) throws IOException{
+    public void GoBackMenuV(MouseEvent mouseEvent) throws IOException {
         app.GoBackToVMenu();
     }
 
@@ -77,7 +74,7 @@ public class MyCalendercontroller implements AppContact {
         timepicker.getItems().addAll(time);
     }
 
-    public void initialize(){
+    public void initialize() {
         fileChooser.setInitialDirectory(new File("C:\\temp"));
     }
 }

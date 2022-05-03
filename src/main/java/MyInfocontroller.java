@@ -7,7 +7,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class MyInfocontroller implements AppContact{
+public class MyInfocontroller implements AppContact {
 
 
     @FXML
@@ -23,7 +23,7 @@ public class MyInfocontroller implements AppContact{
         app.logout1();
     }
 
-    public void GoBackMenuV(MouseEvent mouseEvent) throws IOException{
+    public void GoBackMenuV(MouseEvent mouseEvent) throws IOException {
         app.GoBackToVMenu();
     }
 
@@ -33,15 +33,15 @@ public class MyInfocontroller implements AppContact{
     public Label address;
 
 
-    public void show(MouseEvent mouseEvent) throws IOException{
+    public void show(MouseEvent mouseEvent) throws IOException {
         String username1 = LogInVController.usernameuse;
         File filename = new File("VolunteerData.txt");
 
         BufferedReader br = new BufferedReader(new FileReader(filename));
         String s;
         String k;
-        while ((s = br.readLine()) != null){
-            if(s.equals(username1)){
+        while ((s = br.readLine()) != null) {
+            if (s.equals(username1)) {
                 name.setText(s);
                 s = br.readLine();
                 email.setText(s);

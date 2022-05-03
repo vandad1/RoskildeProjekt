@@ -10,7 +10,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class LogInVController implements AppContact{
+public class LogInVController implements AppContact {
 
     @FXML
     private APPHANDLER app;
@@ -26,13 +26,12 @@ public class LogInVController implements AppContact{
     public static String usernameuse;
 
 
-
     public void back(MouseEvent mouseEvent) throws IOException {
         app.GoBackToChooseRorV();
     }
 
 
-    public void logininfo(MouseEvent mouseEvent) throws IOException{
+    public void logininfo(MouseEvent mouseEvent) throws IOException {
         String passworduse = password.getText();
         usernameuse = username.getText();
 
@@ -46,7 +45,7 @@ public class LogInVController implements AppContact{
 
             if (s.equals(usernameuse)) {
 
-                for(int i = 0; i < 3; i++){
+                for (int i = 0; i < 3; i++) {
                     s = rd.readLine();
                 }
 
@@ -65,10 +64,6 @@ public class LogInVController implements AppContact{
         }
         rd.close();
     }
-
-
-
-
 
 
 }

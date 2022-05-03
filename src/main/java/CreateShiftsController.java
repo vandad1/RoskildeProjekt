@@ -6,12 +6,11 @@ import javafx.scene.input.MouseEvent;
 
 import java.io.*;
 import java.time.LocalDate;
-import java.util.Date;
 
 import static javafx.scene.paint.Color.GREEN;
 import static javafx.scene.paint.Color.RED;
 
-public class CreateShiftsController implements AppContact{
+public class CreateShiftsController implements AppContact {
 
     @FXML
     private APPHANDLER app;
@@ -36,20 +35,19 @@ public class CreateShiftsController implements AppContact{
     public TextField task;
     public TextField stall;
 
-    public void confirm(MouseEvent mouseEvent) throws IOException{
+    public void confirm(MouseEvent mouseEvent) throws IOException {
 
         File VolunteerData = new File("VolunteerData.txt");
         BufferedReader br = new BufferedReader(new FileReader(VolunteerData));
         String s;
         String name = fullname.getText();
 
-        while((s = br.readLine()) != null){
-            if(s.equals(name)){
+        while ((s = br.readLine()) != null) {
+            if (s.equals(name)) {
                 foundor.setText("Person found!");
                 foundor.setTextFill(GREEN);
                 break;
-            }
-            else{
+            } else {
                 foundor.setText("Person not found in system");
                 foundor.setTextFill(RED);
             }
@@ -58,14 +56,14 @@ public class CreateShiftsController implements AppContact{
     }
 
 
-    public void submitS(MouseEvent mouseEvent) throws IOException{
+    public void submitS(MouseEvent mouseEvent) throws IOException {
         String filename = "VolunteerData.txt";
         String navn = fullname.getText();
         addshift(filename, navn);
 
     }
 
-    public void addshift(String filename, String name) throws IOException{
+    public void addshift(String filename, String name) throws IOException {
         LocalDate dato = date.getValue();
         String task1 = task.getText();
         String timer = hours.getText();
@@ -80,36 +78,24 @@ public class CreateShiftsController implements AppContact{
         BufferedReader br = new BufferedReader(new FileReader(oldfile));
         String s;
 
-        File newfileRESPONSIBLE = new File("tempRESPONSIBLE.txt");
-        File oldfileRESPONSIBLE = new File("ResponsibleData.txt");
 
-        FileWriter fw2 = new FileWriter(newfile, true);
-        BufferedWriter bw2 = new BufferedWriter(fw2);
-        PrintWriter pw2 = new PrintWriter(bw2);
-        BufferedReader br2 = new BufferedReader(new FileReader(oldfile));
-        String R;
-
-
-
-        while((s = br.readLine()) != null){
-            if(s.equals(name)){
+        while ((s = br.readLine()) != null) {
+            if (s.equals(name)) {
                 bw.write(name + "\n");
-                for(int i = 0; i < 4; i++){
+                for (int i = 0; i < 4; i++) {
                     s = br.readLine();
                     bw.write(s + "\n");
                 }
                 s = br.readLine();
-                if(s.equals("")){
+                if (s.equals("")) {
                     //**************************
                     bw.write(dato + ", " + stall1 + ", " + task1 + ", " + timer + "\n");
-                }
-                else{
+                } else {
                     //**************************
                     bw.write(s + "  -  " + dato + ", " + stall1 + ", " + task1 + ", " + timer + "\n");
                 }
 
-            }
-            else{
+            } else {
                 bw.write(s);
                 bw.write("\n");
             }
@@ -123,10 +109,5 @@ public class CreateShiftsController implements AppContact{
         File dump = new File(filename);
         newfile.renameTo(dump);
 
-
     }
-
-
-
-
 }
