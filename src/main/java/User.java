@@ -3,21 +3,21 @@ public class User {
     public String date;
     public String time;
 
-    public User(String Task, String Date, String Time) {
+    public User(String task, String date, String time) {
         this.task = task;
         this.date = date;
         this.time = time;
     }
 
-    public String Task() {
+    public String task() {
         return task;
     }
 
-    public String Date() {
+    public String date() {
         return date;
     }
 
-    public String Time() {
+    public String time() {
         return time;
     }
 }

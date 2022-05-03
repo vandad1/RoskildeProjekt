@@ -49,7 +49,7 @@ public class EditShiftsController implements AppContact {
 
 
     @FXML
-    public void setApp(URL url, ResourceBundle resourceBundle) {
+    public void Initialize(URL url, ResourceBundle resourceBundle) {
         task.setCellValueFactory(new PropertyValueFactory<User, String>("shiftTask"));
         date.setCellValueFactory(new PropertyValueFactory<User, String>("shiftDate"));
         time.setCellValueFactory(new PropertyValueFactory<User, String>("shiftTime"));
