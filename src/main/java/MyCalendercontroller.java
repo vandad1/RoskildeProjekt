@@ -30,10 +30,6 @@ public class MyCalendercontroller implements AppContact {
     FileChooser fileChooser = new FileChooser();
 
 
-    public void initialize(URL location, ResourceBundle resources){
-        fileChooser.setInitialDirectory(new File("C:\\temp"));
-    }
-
     @FXML
     private void handleSaveClicked(ActionEvent event){
         Window stage = vbMenu.getScene().getWindow();
@@ -79,5 +75,9 @@ public class MyCalendercontroller implements AppContact {
     @Override
     public void setApp(APPHANDLER app) {
         timepicker.getItems().addAll(time);
+    }
+
+    public void initialize(){
+        fileChooser.setInitialDirectory(new File("C:\\temp"));
     }
 }
