@@ -27,7 +27,6 @@ public class MyInfocontroller implements AppContact {
         app.GoBackToVMenu();
     }
 
-    public Label name;
     public Label email;
     public Label phone;
     public Label address;
