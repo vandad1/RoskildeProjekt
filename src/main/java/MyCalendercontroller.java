@@ -29,7 +29,7 @@ public class MyCalendercontroller implements AppContact {
 
     FileChooser fileChooser = new FileChooser();
 
-    @Override
+
     public void initialize(URL location, ResourceBundle resources){
         fileChooser.setInitialDirectory(new File("C:\\temp"));
     }
@@ -44,7 +44,7 @@ public class MyCalendercontroller implements AppContact {
         try{
             File file = fileChooser.showSaveDialog(stage);
             fileChooser.setInitialDirectory(file.getParentFile());
-            //TODO save
+            //TODO create load and save to file, not working as of now, just testing.
         } catch (Exception e) {
             e.printStackTrace();
         }
