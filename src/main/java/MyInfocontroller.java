@@ -39,11 +39,8 @@ public class MyInfocontroller implements AppContact {
 
         BufferedReader br = new BufferedReader(new FileReader(filename));
         String s;
-        String k;
         while ((s = br.readLine()) != null) {
             if (s.equals(username1)) {
-                name.setText(s);
-                s = br.readLine();
                 email.setText(s);
                 s = br.readLine();
                 phone.setText(s);
