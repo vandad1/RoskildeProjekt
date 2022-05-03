@@ -27,8 +27,14 @@
                     <Font size="18.0" />
                 </font>
             </Label>
-            <TextField fx:id="username" layoutX="255.0" layoutY="187.0" />
-            <PasswordField fx:id="password" layoutX="255.0" layoutY="222.0" />
+            <TextField fx:id="username" layoutX="255.0" layoutY="187.0">
+            <cursor>
+               <Cursor fx:constant="TEXT" />
+            </cursor></TextField>
+            <PasswordField fx:id="password" layoutX="255.0" layoutY="222.0">
+            <cursor>
+               <Cursor fx:constant="TEXT" />
+            </cursor></PasswordField>
             <Button layoutX="255.0" layoutY="259.0" mnemonicParsing="false" onMouseClicked="#logininfo" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: 0;" text="Log in" textFill="#fff4f4">
             <font>
                <Font name="DejaVu Sans Bold" size="17.0" />
