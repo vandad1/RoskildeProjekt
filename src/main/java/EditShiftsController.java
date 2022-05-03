@@ -1,71 +1,57 @@
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.DateCell;
-import javafx.scene.control.DatePicker;
+import javafx.fxml.Initializable;
+import javafx.scene.control.TextField;
+import javafx.scene.control.TreeTableColumn;
+import javafx.scene.control.TreeTableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-import javafx.util.Callback;
 
-import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.Instant;
-import java.time.LocalDate;
-import java.time.ZoneId;
-import java.util.Date;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class EditShiftsController implements AppContact {
+public class EditShiftsController implements Initializable {
 
     @FXML
-    private APPHANDLER app;
+    private TextField editShift;
 
+    @FXML
+    private TreeTableView<User> shiftTable;
+
+    @FXML
+    private TreeTableColumn<User, String> shiftTask;
+
+    @FXML
+    private TreeTableColumn<User, String> shiftDate;
+
+    @FXML
+    private TreeTableColumn<User, String> shiftTime;
+
+    @FXML
+    void GoBackMenuR(MouseEvent event) {
+
+    }
+
+    @FXML
+    void logout(MouseEvent event) {
+
+    }
+
+    @FXML
+    void search(MouseEvent event) {
+
+    }
+
+    ObservableList<User> List = FXCollections.observableArrayList(
+            new User("Goere rent", "05/03/2022", "15:0019:00"));
 
     @Override
-    public void setApp(APPHANDLER app) {
-        this.app = app;
-    }
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        shiftDate.setCellValueFactory(new PropertyValueFactory<User, String>("shiftDate"));
+        shiftTask.setCellValueFactory(new PropertyValueFactory<User, String>("shiftTask"));
+        shiftTime.setCellValueFactory(new PropertyValueFactory<User, String>("shiftTime"));
 
-
-    public void logout(MouseEvent mouseEvent) throws IOException {
-        app.logout1();
-    }
-
-
-    public void GoBackMenuR(MouseEvent mouseEvent) throws IOException {
-        app.GoBackToRmenu();
-    }
-
-
-
-    private void datepickerSetDate() throws ParseException {
-
-
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-        String dateInString = "2022-04-30";
-        Date date = formatter.parse(dateInString);
-
-        Instant instant = date.toInstant();
-        LocalDate localDate = instant.atZone(ZoneId.systemDefault()).toLocalDate();
-
-        ObservableList<LocalDate> selectedDates = FXCollections.observableArrayList();
-        selectedDates.addAll(localDate);
-
-        DatePicker datePicker_1 = new DatePicker();
-        datePicker_1.setOnAction(event -> selectedDates.add(datePicker_1.getValue()));
-
-        datePicker_1.setDayCellFactory(new Callback<DatePicker, DateCell>() {
-            @Override
-            public DateCell call(DatePicker param) {
-                return new DateCell() {
-                    @Override
-                    public void updateItem(LocalDate item, boolean empty) {
-                        super.updateItem(item, empty);
-                        boolean alreadySelected = selectedDates.contains(item);
-                        setDisable(alreadySelected);
-                        setStyle(alreadySelected ? "-fx-background-color: lightblue;" : "");
-                    }
-                };
-            }
-        });
+        shiftTable.setId(String.valueOf(List));
     }
 }
