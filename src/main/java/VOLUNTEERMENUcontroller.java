@@ -32,7 +32,7 @@ public class VOLUNTEERMENUcontroller implements AppContact {
     }
 
 
-    public Label shifts;
+    public static Label shifts;
 
 
 }
