@@ -7,6 +7,9 @@
 
 <Scene xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ContactRcontroller">
     <AnchorPane prefHeight="400.0" prefWidth="600.0">
+        <style> -fx-background-image: url("https://browsecat.net/sites/default/files/orange-background-hd-126457-577970-1988082.png");
+            -fx-background-size: cover, auto;
+        </style>
         <children>
             <Label layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="258.0" text="L o g g e d  i n  a s :  V o l u n t e e r">
                 <font>
@@ -51,7 +54,10 @@
                <Font size="14.0" />
             </font>
          </Label>
-         <Button layoutX="419.0" layoutY="113.0" mnemonicParsing="false" onMouseClicked="#search" text="Search" />
+         <Button layoutX="419.0" layoutY="113.0" mnemonicParsing="false" onMouseClicked="#search" style="-fx-background-color: 0;" text="Search">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor></Button>
          <Label fx:id="notfound" layoutX="232.0" layoutY="139.0" prefHeight="18.0" prefWidth="151.0" text="" textFill="RED" />
 
         </children>
