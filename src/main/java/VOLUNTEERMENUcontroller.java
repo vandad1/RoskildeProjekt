@@ -23,10 +23,6 @@ public class VOLUNTEERMENUcontroller implements AppContact {
         app.MyInfo();
     }
 
-    public void mycalender(MouseEvent mouseEvent) throws IOException {
-        app.MyCalender();
-    }
-
     public void contactR(MouseEvent mouseEvent) throws IOException {
         app.ContactR();
     }

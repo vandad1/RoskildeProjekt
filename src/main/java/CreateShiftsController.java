@@ -12,6 +12,7 @@ import java.util.Scanner;
 import static javafx.scene.paint.Color.GREEN;
 import static javafx.scene.paint.Color.RED;
 
+// TODO: 03/05/2022 Lave Create Shift om til tableview, til videreførsel til edit shift
 public class CreateShiftsController implements AppContact{
 
     @FXML

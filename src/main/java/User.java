@@ -1,7 +1,7 @@
 public class User {
-    private String shiftTask;
-    private String shiftDate;
-    private String shiftTime;
+    public String shiftTask;
+    public String shiftDate;
+    public String shiftTime;
 
     public User(String shiftTask, String shiftDate, String shiftTime) {
         this.shiftTask = shiftTask;

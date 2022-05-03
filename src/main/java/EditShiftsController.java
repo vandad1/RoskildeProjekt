@@ -2,9 +2,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TextField;
-import javafx.scene.control.TreeTableColumn;
-import javafx.scene.control.TreeTableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 
@@ -17,16 +15,16 @@ public class EditShiftsController implements Initializable {
     private TextField editShift;
 
     @FXML
-    private TreeTableView<User> shiftTable;
+    private TableView<User> shiftTable;
 
     @FXML
-    private TreeTableColumn<User, String> shiftTask;
+    private TableColumn<User, String> shiftTask;
 
     @FXML
-    private TreeTableColumn<User, String> shiftDate;
+    private TableColumn<User, String> shiftDate;
 
     @FXML
-    private TreeTableColumn<User, String> shiftTime;
+    private TableColumn<User, String> shiftTime;
 
     @FXML
     void GoBackMenuR(MouseEvent event) {
