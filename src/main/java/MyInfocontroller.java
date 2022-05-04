@@ -38,19 +38,11 @@ public class MyInfocontroller implements AppContact {
 
     public void show(MouseEvent mouseEvent) throws IOException {
         String username1 = LogInVController.usernameuse;
-        File filename = new File("VolunteerData.txt");
-
-        BufferedReader br = new BufferedReader(new FileReader(filename));
-        String s;
-        while ((s = br.readLine()) != null) {
-            if (s.equals(username1)) {
-                email.setText(s);
-                s = br.readLine();
-                phone.setText(s);
-                s = br.readLine();
-                address.setText(s);
-            }
+        User user = Database.getUserFromName(username1);
+        if (user != null) {
+            email.setText(user.geteMail());
+            phone.setText(user.getTlfNr());
+            address.setText(user.getAddress());
         }
-
     }
 }

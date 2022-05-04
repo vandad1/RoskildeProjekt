@@ -35,13 +35,25 @@ public class LogInVController implements AppContact {
         String passworduse = password.getText();
         usernameuse = username.getText();
 
+        User user = Database.getUserFromName(usernameuse);
+        if (user != null && !user.isResponsible()){
+            if (user.getPassword().equals(passworduse)){
+                app.OpenStartV();
+            }
+                login.setText("Wrong username or password");
+                login.setTextFill(Color.web("#FF0000"));
+        }
+            login.setText("Wrong username or password");
+            login.setTextFill(Color.web("#FF0000"));
+    }
 
+        /*
         File VolunteerData = new File("VolunteerData.txt");
 
         BufferedReader rd = new BufferedReader(new FileReader(VolunteerData));
 
         String s;
-        while ((s = rd.readLine()) != null) {
+        while ((s = rd.readLine()) != null) { //done +Database getUser
 
             if (s.equals(usernameuse)) {
 
@@ -64,7 +76,7 @@ public class LogInVController implements AppContact {
                 login.setTextFill(Color.web("#FF0000"));
             }
         }
-        rd.close();
+        rd.close();*/
     }
 
 

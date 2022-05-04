@@ -6,6 +6,7 @@ import javafx.scene.input.MouseEvent;
 
 import java.io.*;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -40,22 +41,19 @@ public class CreateShiftsController implements AppContact {
 
     public void confirm(MouseEvent mouseEvent) throws IOException {
 
-        File VolunteerData = new File("VolunteerData.txt");
-        BufferedReader br = new BufferedReader(new FileReader(VolunteerData));
-        String s;
+
         String name = fullname.getText();
 
-        while((s = br.readLine()) != null){
-            if(s.equals(name)){
-                foundor.setText("Person found!");
-                foundor.setTextFill(GREEN);
-                break;
-            }
-            else{
-                foundor.setText("Person not found in system");
-                foundor.setTextFill(RED);
-            }
 
+
+        User user = Database.getUserFromName(name);
+        if (user != null) {
+            foundor.setText("Person found!");
+            foundor.setTextFill(GREEN);
+
+        } else {
+            foundor.setText("Person not found in system");
+            foundor.setTextFill(RED);
         }
     }
 

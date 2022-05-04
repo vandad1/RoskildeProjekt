@@ -54,74 +54,35 @@ public class EDITVController implements AppContact {
             notfound.setText("Person not found in system");
             notfound.setTextFill(RED);
         }
-        br.close();
-
     }
 
     public void save(MouseEvent mouseEvent) throws IOException {
-        String filename = "VolunteerData.txt";
-        String newemail = email.getText();
-        String newnumber = phonenr.getText();
-        String newaddress = address.getText();
+        String newName = fullname.getText();
+        String newEMail = email.getText();
+        String newNumber = phonenr.getText();
+        String newAddress = address.getText();
 
-        redigerP(filename, name, newemail, newnumber, newaddress);
+        redigerP(newName, newEMail, newNumber, newAddress);
 
     }
 
-    public void redigerP(String filename, String name, String newemail, String newnumber, String newaddress) throws IOException {
-        String tempfile = "temp.txt";
-        File oldfile = new File(filename);
-        File newfile = new File(tempfile);
-
-        FileWriter fw = new FileWriter(tempfile, true);
-        BufferedWriter bw = new BufferedWriter(fw);
-        PrintWriter pw = new PrintWriter(bw);
-        BufferedReader br = new BufferedReader(new FileReader(oldfile));
-        String s;
-
-        while ((s = br.readLine()) != null) {
-            if (s.equals(name)) {
-                bw.write(name);
-                bw.write("\n");
-            } else if (s.equals(email.getPromptText())) {
-                if (newemail.equals("")) {
-                    bw.write(email.getPromptText());
-                    bw.write("\n");
-                } else {
-                    bw.write(newemail);
-                    bw.write("\n");
-                }
-            } else if (s.equals(phonenr.getPromptText())) {
-                if (newnumber.equals("")) {
-                    bw.write(phonenr.getPromptText());
-                    bw.write("\n");
-                } else {
-                    bw.write(newnumber);
-                    bw.write("\n");
-                }
-            } else if (s.equals(address.getPromptText())) {
-                if (newaddress.equals("")) {
-                    bw.write(address.getPromptText());
-                    bw.write("\n");
-                } else {
-                    bw.write(newaddress);
-                    bw.write("\n");
-                }
-            } else {
-                bw.write(s);
-                bw.write("\n");
-            }
+    public void redigerP(String name, String eMail, String number, String address) {
+        User user = Database.getUserFromName(name);
+        if (user != null) {
+            user.setName(name);
+            user.seteMail(eMail);
+            user.setTlfNr(number);
+            user.setAddress(address);
+            Database.saveVToFile();
+            changedS.setText("Information changed succesfully!");
+            changedS.setTextFill(GREEN);
+        } else {
+            changedS.setText("Person not found, ERROR");
+            changedS.setTextFill(RED);
         }
 
-        br.close();
-        bw.close();
-        pw.flush();
-        pw.close();
-        oldfile.delete();
-        File dump = new File(filename);
-        newfile.renameTo(dump);
-        changedS.setText("Information changed succesfully!");
-        changedS.setTextFill(GREEN);
+
+
 
     }
 
@@ -130,47 +91,20 @@ public class EDITVController implements AppContact {
     }
 
     public void SLET(MouseEvent mouseEvent) throws IOException {
-        String filename = "VolunteerData.txt";
-        sletperson(filename, name, password);
+
+        sletperson(name);
     }
 
-    public void sletperson(String filename, String name, String password) throws IOException {
-        String tempfile = "temp.txt";
-        File oldfile = new File(filename);
-        File newfile = new File(tempfile);
-
-        FileWriter fw = new FileWriter(tempfile, true);
-        BufferedWriter bw = new BufferedWriter(fw);
-        PrintWriter pw = new PrintWriter(bw);
-        BufferedReader br = new BufferedReader(new FileReader(oldfile));
-        String s;
-
-        while ((s = br.readLine()) != null) {
-            if (s.equals(name)) {
-                bw.write("");
-            } else if (s.equals(email.getPromptText())) {
-                bw.write("");
-            } else if (s.equals(phonenr.getPromptText())) {
-                bw.write("");
-            } else if (s.equals(address.getPromptText())) {
-                bw.write("");
-            } else if (s.equals(password)) {
-                bw.write("");
-            } else {
-                bw.write(s);
-                bw.write("\n");
-            }
+    public void sletperson(String name) {
+        User user = Database.getUserFromName(name);
+        if (user != null) {
+            Database.removePerson(user);
+            changedS.setText("Person deleted successfully");
+            changedS.setTextFill(RED);
+        } else {
+            changedS.setText("User not found");
+            changedS.setTextFill(RED);
         }
-
-        br.close();
-        bw.close();
-        pw.flush();
-        pw.close();
-        oldfile.delete();
-        File dump = new File(filename);
-        newfile.renameTo(dump);
-        changedS.setText("Person deleted succesfully");
-        changedS.setTextFill(RED);
 
     }
 }

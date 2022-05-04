@@ -15,26 +15,41 @@ public class EditShiftsController implements AppContact {
 
     @Override
     public void setApp(APPHANDLER app) {
-            this.app = app;
+        this.app = app;
+        ObservableList<Shift> List = FXCollections.observableArrayList(Database.getOBSShift());
+        name.setCellValueFactory(new PropertyValueFactory("name"));
+        date.setCellValueFactory(new PropertyValueFactory("date"));
+        task.setCellValueFactory(new PropertyValueFactory("task"));
+        time.setCellValueFactory(new PropertyValueFactory("time"));
+        /*table.setEditable(true);
+        name.setEditable(true);
+        date.setEditable(true);
+        task.setEditable(true);
+        time.setEditable(true);
+        name.setCellFactory(TextFieldTableCell.forTableColumn());
+        date.setCellFactory(TextFieldTableCell.forTableColumn());
+        task.setCellFactory(TextFieldTableCell.forTableColumn());
+        time.setCellFactory(TextFieldTableCell.forTableColumn());*/
+        table.setItems(List);
         }
 
     @FXML
     public APPHANDLER app;
 
     @FXML
-    public TableView<User> table;
+    public TableView<Shift> table;
 
     @FXML
-    public TableColumn<User, String> name;
+    public TableColumn<Shift, String> name;
 
     @FXML
-    public TableColumn<User, String> date;
+    public TableColumn<Shift, String> date;
 
     @FXML
-    public TableColumn<User, String> task;
+    public TableColumn<Shift, String> task;
 
     @FXML
-    public TableColumn<User, String> time;
+    public TableColumn<Shift, String> time;
 
     @FXML
     public void GoBackMenuR(MouseEvent mouseEvent) throws IOException {
@@ -51,7 +66,7 @@ public class EditShiftsController implements AppContact {
     }
 
 
-    }
+}
 
 
 
