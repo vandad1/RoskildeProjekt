@@ -6,9 +6,12 @@ public class User {
 
     public User(String name, String date, String task, String time) {
         this.name = name;
-        this.date = date;
-        this.task = task;
-        this.time = time;
+        this.eMail = eMail;
+        this.tlfNr = tlfNr;
+        this.address = address;
+        this.password = password;
+        responsible = false;
+        shifts = new ArrayList<>();
     }
 
     public String getName(){

@@ -41,27 +41,18 @@ public class EDITVController implements AppContact {
     public void search(MouseEvent mouseEvent) throws IOException {
 
         name = fullname.getText();
+        User user = Database.getUserFromName(name);
+        if (user != null) {
+            fullname.setPromptText(user.getName());
+            email.setPromptText(user.geteMail());
+            phonenr.setPromptText(user.getTlfNr());
+            address.setPromptText(user.getAddress());
+            notfound.setText("  ");
+            notfound.setTextFill(WHITE);
 
-        File VolunteerData = new File("VolunteerData.txt");
-        BufferedReader br = new BufferedReader(new FileReader(VolunteerData));
-        String s;
-
-        while ((s = br.readLine()) != null) {
-
-            if (s.equals(name)) {
-                fullname.setPromptText(s);
-                email.setPromptText(s = br.readLine());
-                phonenr.setPromptText(s = br.readLine());
-                address.setPromptText(s = br.readLine());
-                s = br.readLine();
-                password = s;
-                notfound.setText("  ");
-                notfound.setTextFill(WHITE);
-                break;
-            } else {
-                notfound.setText("Person not found in system");
-                notfound.setTextFill(RED);
-            }
+        } else {
+            notfound.setText("Person not found in system");
+            notfound.setTextFill(RED);
         }
         br.close();
 
@@ -182,6 +173,4 @@ public class EDITVController implements AppContact {
         changedS.setTextFill(RED);
 
     }
-
-
 }
