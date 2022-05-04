@@ -52,10 +52,10 @@ public class EditShiftsController implements AppContact {
     );
 
 
-    public void initialize(APPHANDLER app, ResourceBundle resourceBundle) {
-        task.setCellValueFactory(new PropertyValueFactory<User, String>("shiftTask"));
-        date.setCellValueFactory(new PropertyValueFactory<User, String>("shiftDate"));
-        time.setCellValueFactory(new PropertyValueFactory<User, String>("shiftTime"));
+    public void List(APPHANDLER app, ResourceBundle resourceBundle) {
+        task.setCellValueFactory(new PropertyValueFactory<User, String>("getTask"));
+        date.setCellValueFactory(new PropertyValueFactory<User, String>("getDate"));
+        time.setCellValueFactory(new PropertyValueFactory<User, String>("getTime"));
 
         table.setItems(List);
     }
