@@ -56,7 +56,10 @@ public class EditShiftsController implements AppContact {
             new User("Emil", "Ornlig syg kodning", "5/4/2022", "17:00 - 21:00")
 
 
-            Database.getVagter()
+
+           //Database.getVagter()
+
+
     );
 
 
@@ -74,7 +77,6 @@ public class EditShiftsController implements AppContact {
         date.setCellFactory(TextFieldTableCell.forTableColumn());
         task.setCellFactory(TextFieldTableCell.forTableColumn());
         time.setCellFactory(TextFieldTableCell.forTableColumn());
-
 
         table.setItems(List);
     }
