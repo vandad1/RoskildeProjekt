@@ -1,6 +1,7 @@
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -11,7 +12,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class EditShiftsController implements AppContact {
+public class EditShiftsController implements Initializable {
 
 
     @FXML
@@ -46,20 +47,14 @@ public class EditShiftsController implements AppContact {
             new User("Hotdog service", "05/03/2022", "20:00 - 24:00")
     );
 
-
-    public void CellValue(URL url, ResourceBundle resourceBundle) {
-        task.setCellValueFactory(new PropertyValueFactory<User, String>("task"));
-        date.setCellValueFactory(new PropertyValueFactory<User, String>("date"));
-        time.setCellValueFactory(new PropertyValueFactory<User, String>("time"));
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        task.setCellValueFactory(new PropertyValueFactory<User, String>("shiftTask"));
+        date.setCellValueFactory(new PropertyValueFactory<User, String>("shiftDate"));
+        time.setCellValueFactory(new PropertyValueFactory<User, String>("shiftTime"));
 
         table.setItems(List);
     }
-
-    @Override
-    public void setApp(APPHANDLER apphandler) {
-        this.app = apphandler;
-    }
-
 }
 
 
