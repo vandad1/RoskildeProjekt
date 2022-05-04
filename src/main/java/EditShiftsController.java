@@ -12,12 +12,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class EditShiftsController implements AppContact {
+public class EditShiftsController implements Initializable, AppContact {
 
-    @Override
-    public void setApp(APPHANDLER app) {
-            this.app = app;
-        }
 
     @FXML
     public APPHANDLER app;
@@ -51,8 +47,8 @@ public class EditShiftsController implements AppContact {
             new User("Hotdog service", "05/03/2022", "20:00 - 24:00")
     );
 
-
-    public void List(APPHANDLER app, ResourceBundle resourceBundle) {
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
         task.setCellValueFactory(new PropertyValueFactory<User, String>("getTask"));
         date.setCellValueFactory(new PropertyValueFactory<User, String>("getDate"));
         time.setCellValueFactory(new PropertyValueFactory<User, String>("getTime"));
@@ -60,8 +56,11 @@ public class EditShiftsController implements AppContact {
         table.setItems(List);
     }
 
-
+    @Override
+    public void setApp(APPHANDLER app) {
+        this.app = app;
     }
+}
 
 
 
