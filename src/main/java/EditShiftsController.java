@@ -14,13 +14,10 @@ import java.util.ResourceBundle;
 
 public class EditShiftsController implements AppContact {
 
-
     @Override
-    public void setApp(APPHANDLER apphandler) {
-        this.app = apphandler;
-    }
-
-
+    public void setApp(APPHANDLER app) {
+            this.app = app;
+        }
 
     @FXML
     public APPHANDLER app;
@@ -55,7 +52,7 @@ public class EditShiftsController implements AppContact {
     );
 
 
-    public void Initialize(URL url, ResourceBundle resourceBundle) throws IOException {
+    public void initialize(APPHANDLER app, ResourceBundle resourceBundle) {
         task.setCellValueFactory(new PropertyValueFactory<User, String>("shiftTask"));
         date.setCellValueFactory(new PropertyValueFactory<User, String>("shiftDate"));
         time.setCellValueFactory(new PropertyValueFactory<User, String>("shiftTime"));
@@ -64,6 +61,7 @@ public class EditShiftsController implements AppContact {
     }
 
 
-}
+    }
+
 
 
