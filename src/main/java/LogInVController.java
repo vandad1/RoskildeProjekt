@@ -51,8 +51,6 @@ public class LogInVController implements AppContact {
 
                 if (s.equals(passworduse)) {
                     app.OpenStartV();
-                    s = rd.readLine();
-                    VOLUNTEERMENUcontroller.shifts.setText(s);
 
 
                 } else {

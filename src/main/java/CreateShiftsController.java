@@ -92,7 +92,7 @@ public class CreateShiftsController implements AppContact{
                     bw.write(dato + ", " + task1 + ", " + timer + "\n");
                 }
                 else{
-                    bw.write(s + "  -  " + dato + ", " + task1 + ", " + timer + "\n");
+                    bw.write(s + " . " + dato + ", " + task1 + ", " + timer + "\n");
                 }
 
             }
