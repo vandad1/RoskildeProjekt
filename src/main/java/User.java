@@ -1,13 +1,13 @@
 public class User {
     private String name;
-    private String task;
     private String date;
+    private String task;
     private String time;
 
-    public User(String name, String task, String date, String time) {
+    public User(String name, String date, String task, String time) {
         this.name = name;
-        this.task = task;
         this.date = date;
+        this.task = task;
         this.time = time;
     }
 
@@ -15,12 +15,12 @@ public class User {
         return name;
     }
 
-    public String getTask() {
-        return task;
-    }
-
     public String getDate() {
         return date;
+    }
+
+    public String getTask() {
+        return task;
     }
 
     public String getTime() {
@@ -31,12 +31,12 @@ public class User {
         this.name = name;
     }
 
-    public void setTask(String task) {
-        this.task = task;
+    public void setDate(String task) {
+        this.date = date;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setTask(String date) {
+        this.task = task;
     }
 
     public void setTime(String time) {
