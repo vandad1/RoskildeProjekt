@@ -12,7 +12,14 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class EditShiftsController implements Initializable {
+public class EditShiftsController implements AppContact {
+
+
+    @Override
+    public void setApp(APPHANDLER apphandler) {
+        this.app = apphandler;
+    }
+
 
 
     @FXML
@@ -47,14 +54,16 @@ public class EditShiftsController implements Initializable {
             new User("Hotdog service", "05/03/2022", "20:00 - 24:00")
     );
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    public void Initialize(URL url, ResourceBundle resourceBundle) throws IOException {
         task.setCellValueFactory(new PropertyValueFactory<User, String>("shiftTask"));
         date.setCellValueFactory(new PropertyValueFactory<User, String>("shiftDate"));
         time.setCellValueFactory(new PropertyValueFactory<User, String>("shiftTime"));
 
         table.setItems(List);
     }
+
+
 }
 
 
