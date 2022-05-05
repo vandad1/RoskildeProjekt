@@ -14,12 +14,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class EditShiftsController implements AppContact {
+public class EditShiftsController implements Initializable, AppContact {
 
-    @Override
-    public void setApp(APPHANDLER app) {
-            this.app = app;
-        }
 
     @FXML
     public APPHANDLER app;
@@ -59,8 +55,8 @@ public class EditShiftsController implements AppContact {
             Database.getVagter()
     );
 
-
-    public void List(APPHANDLER app, ResourceBundle resourceBundle) {
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
         name.setCellValueFactory(new PropertyValueFactory<User, String>("name"));
         date.setCellValueFactory(new PropertyValueFactory<User, String>("date"));
         task.setCellValueFactory(new PropertyValueFactory<User, String>("task"));
@@ -79,8 +75,11 @@ public class EditShiftsController implements AppContact {
         table.setItems(List);
     }
 
-
+    @Override
+    public void setApp(APPHANDLER app) {
+        this.app = app;
     }
+}
 
 
 
