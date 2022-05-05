@@ -13,6 +13,7 @@ public class APPHANDLER extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+        Database.loadVolunteerDataFromFileToUsers();
         FXMLLoader fxmlLoader = new FXMLLoader(APPHANDLER.class.getResource("/Forside.fxml"));
         sceneStart = fxmlLoader.load();
         ForsideController controllerstart = fxmlLoader.getController();

@@ -3,14 +3,15 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.scene.input.MouseEvent;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 public class VOLUNTEERMENUcontroller implements AppContact {
-
 
 
     @FXML
@@ -38,79 +39,48 @@ public class VOLUNTEERMENUcontroller implements AppContact {
     public Label shift2;
     public Label shift3;
 
-    public void show1(ActionEvent actionEvent) throws IOException{
-        String username1 = LogInVController.usernameuse;
-        File filename = new File("VolunteerData.txt");
-
-        BufferedReader br = new BufferedReader(new FileReader(filename));
-        String s;
-        while ((s = br.readLine()) != null) {
-            if (s.equals(username1)) {
-                for(int i = 0; i < 4; i++){
-                    s = br.readLine();
-                }
-                if(s.equals("")){
-                    shifts.setText("No occuring shifts");
-                }
-                else{
-                    if(!s.contains(".")){
-                        shifts.setText(s);
-                    }
-                    else{
-                        String shift = s;
-                        StringTokenizer st = new StringTokenizer(shift, ".");
-                            shifts.setText(st.nextElement().toString());
-                    }
-                }
-
-            }
-        }
-
-    }
-
-
-    public void show3(ActionEvent actionEvent) throws IOException{
-        String username1 = LogInVController.usernameuse;
-        File filename = new File("VolunteerData.txt");
-
-        BufferedReader br = new BufferedReader(new FileReader(filename));
-        String s;
-        while ((s = br.readLine()) != null) {
-            if (s.equals(username1)) {
-                for(int i = 0; i < 4; i++){
-                    s = br.readLine();
-                }
-                if(s.equals("")){
-                    shifts.setText("No occuring shifts");
-                }
-                else{
-                    if(!s.contains(".")){
-                        shifts.setText(s);
-                        shift2.setText("No more occuring shifts");
-                    }
-                    else{
-                        String shift = s;
-                        StringTokenizer st = new StringTokenizer(shift, ".");
-                        int antal = st.countTokens();
-                        shifts.setText(st.nextElement().toString());
-                        shift2.setText(st.nextElement().toString());
-                        System.out.println(antal);
-                        if(antal < 3){
-                            shift3.setText("No more occuring shifts");
-                        }
-                        else{
-                            shift3.setText(st.nextElement().toString());
-                        }
-
-                    }
-
-                }
-
-
-            }
+    public void show1(ActionEvent actionEvent) throws IOException {
+        //String username1 = LogInVController.usernameuse;
+        User user = Database.getUserFromName(LogInVController.usernameuse);
+        Shift shift = user.getNextShift();
+        if (shift != null){
+            shifts.setText("");
+            shift2.setText("");
+            shift3.setText("");
+            shifts.setText(shift.stringToPrint());
+        } else {
+            shifts.setText("No occurring shift");
         }
     }
 
 
-
+    public void show3(ActionEvent actionEvent) throws IOException {
+        shifts.setText("");
+        shift2.setText("");
+        shift3.setText("");
+        User user = Database.getUserFromName(LogInVController.usernameuse);
+        ArrayList<Shift> moreShifts = user.getNext3Shifts();
+        switch (moreShifts.size()){
+            case 0:
+                shifts.setText("No occurring shift");
+                break;
+            case 1:
+                shifts.setText(moreShifts.get(0).stringToPrint());
+                shift2.setText("No occurring shifts");
+                break;
+            case 2:
+                shifts.setText(moreShifts.get(0).stringToPrint());
+                shift2.setText(moreShifts.get(1).stringToPrint());
+                shift3.setText("No occurring shifts");
+                break;
+            case 3:
+                shifts.setText(moreShifts.get(0).stringToPrint());
+                shift2.setText(moreShifts.get(1).stringToPrint());
+                shift3.setText(moreShifts.get(2).stringToPrint());
+                break;
+            default:
+                shifts.setText("ERROR");
+                break;
+        }
+    }
 }

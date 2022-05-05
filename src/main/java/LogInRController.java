@@ -28,37 +28,20 @@ public class LogInRController implements AppContact {
     public static String usernameuse;
     public Label login;
 
-
     public void logininfo(MouseEvent mouseEvent) throws IOException {
-
         String passworduse = password.getText();
         usernameuse = username.getText();
 
-
-        File responsibleData = new File("ResponsibleData.txt");
-
-        BufferedReader rd = new BufferedReader(new FileReader(responsibleData));
-
-        String s;
-        while ((s = rd.readLine()) != null) {
-
-            if (s.equals(usernameuse)) {
-
-                s = rd.readLine();
-                if (s.equals(passworduse)) {
-                    app.OpenStartR();
-                } else {
-                    login.setText("Wrong username or password");
-                    login.setTextFill(Color.web("#FF0000"));
-
-                }
-
-            } else {
-                login.setText("Wrong username or password");
-                login.setTextFill(Color.web("#FF0000"));
+        User user = Database.getUserFromName(usernameuse);
+        if (user != null && user.isResponsible()){
+            if (user.getPassword().equals(passworduse)){
+                app.OpenStartR();
             }
+            login.setText("Wrong username or password");
+            login.setTextFill(Color.web("#FF0000"));
         }
-        rd.close();
+        login.setText("Wrong username or password");
+        login.setTextFill(Color.web("#FF0000"));
     }
 
     public void back(MouseEvent mouseEvent) throws IOException {

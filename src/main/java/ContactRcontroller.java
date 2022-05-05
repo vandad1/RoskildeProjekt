@@ -32,26 +32,15 @@ public class ContactRcontroller implements AppContact {
         app.GoBackToVMenu();
     }
 
-    public void search(MouseEvent mouseEvent) throws IOException{
+    public void search(MouseEvent mouseEvent) throws IOException {
         String name = responsibleName.getText();
-
-        BufferedReader br = new BufferedReader(new FileReader("ResponsibleData.txt"));
-        String s;
-        while((s = br.readLine()) != null){
-            if(s.equals(name)){
-                s = br.readLine();
-                responsiblemail.setText(s);
-                s = br.readLine();
-                responsiblenumber.setText(s);
-                break;
-            }
-            else{
-                notfound.setText("Responsible not found");
-            }
+        User user = Database.getUserFromName(name);
+        if (user != null){
+            responsiblemail.setText(user.geteMail());
+            responsiblenumber.setText(user.getTlfNr());
+        } else {
+            notfound.setText("Responsible not found");
         }
-
-
-
-
     }
 }
+

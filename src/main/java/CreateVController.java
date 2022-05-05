@@ -36,56 +36,37 @@ public class CreateVController implements AppContact {
     public Label missing;
     public Label auto;
     public Label password;
-    public static String name1;
 
 
     public void submit(MouseEvent mouseEvent) throws IOException {
-        name1 = name.getText();
+        String name1 = name.getText();
         String email1 = email.getText();
         String phonenr1 = phonenr.getText();
         String address1 = address.getText();
+        String password1;
 
 
         if (Objects.equals(name1, "") || Objects.equals(email1, "") || Objects.equals(phonenr1, "") || Objects.equals(address1, "")) {
             missing.setText("Missing information!");
         } else {
-            File volunteerInfo = new File("VolunteerData.txt");
-
-            BufferedWriter bw = new BufferedWriter(new FileWriter(volunteerInfo, true));
-            PrintWriter pw = new PrintWriter(bw);
-
-            bw.write(name1 + "\n");
-            bw.write(email1 + "\n");
-            bw.write(phonenr1 + "\n");
-            bw.write(address1 + "\n");
-
+            //password gen
             char[] characters = "abcdefghijklmnopqrstuvwxyz0123456789".toCharArray();
             Random random = new SecureRandom();
             StringBuilder pass = new StringBuilder();
             for (int i = 0; i < 5; i++) {
                 pass.append(characters[random.nextInt(characters.length)]);
             }
-            bw.write(String.valueOf(pass) + "\n");
-            for (int i = 0; i < 2; i++) {
-                bw.write("\n");
-            }
 
+            password1 = String.valueOf(pass); //setup password
 
+            User user = new User(name1, email1, phonenr1, address1, password1);//new user
+            Database.addV(user);
+            //display to user
             password.setText(String.valueOf(pass));
-
             auto.setText("Auto Generated Password:");
-
             missing.setTextFill(GREEN);
-            missing.setText("Volunteer Created Succesfully!");
-
-            bw.close();
-            pw.close();
-
+            missing.setText("Volunteer Created Successfully!");
 
         }
-
-
     }
-
-
 }
