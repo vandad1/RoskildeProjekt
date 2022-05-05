@@ -6,15 +6,14 @@ import javafx.scene.input.MouseEvent;
 
 import java.io.*;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Scanner;
 
 import static javafx.scene.paint.Color.GREEN;
 import static javafx.scene.paint.Color.RED;
 
-
-public class CreateShiftsController implements AppContact {
+// TODO: 03/05/2022 Lave Create Shift om til tableview, til videreførsel til edit shift
+public class CreateShiftsController implements AppContact{
 
     @FXML
     private APPHANDLER app;
@@ -39,43 +38,82 @@ public class CreateShiftsController implements AppContact {
     public TextField task;
     public Label succesfully;
 
-    public void confirm(MouseEvent mouseEvent) throws IOException {
+    public void confirm(MouseEvent mouseEvent) throws IOException{
 
-
+        File VolunteerData = new File("VolunteerData.txt");
+        BufferedReader br = new BufferedReader(new FileReader(VolunteerData));
+        String s;
         String name = fullname.getText();
 
+        while((s = br.readLine()) != null){
+            if(s.equals(name)){
+                foundor.setText("Person found!");
+                foundor.setTextFill(GREEN);
+                break;
+            }
+            else{
+                foundor.setText("Person not found in system");
+                foundor.setTextFill(RED);
+            }
 
-
-        User user = Database.getUserFromName(name);
-        if (user != null) {
-            foundor.setText("Person found!");
-            foundor.setTextFill(GREEN);
-
-        } else {
-            foundor.setText("Person not found in system");
-            foundor.setTextFill(RED);
         }
     }
 
-    public void submitS(MouseEvent mouseEvent) throws IOException {
+    public void submitS(MouseEvent mouseEvent) throws IOException{
         String navn = fullname.getText();
         addshift(navn);
     }
 
-    public void addshift(String name) throws IOException {
+    public void addshift(String name) throws IOException{
         LocalDate dato = date.getValue();
         String task1 = task.getText();
         String timer = hours.getText();
 
-        User user = Database.getUserFromName(name);
-        if (user == null) {
-            succesfully.setText("User not found");
-        } else {
-            Shift shift = new Shift(dato.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")), task1, timer, user);
-            user.addShift(shift);
-            succesfully.setText("Shift added");
+        String filename = "VolunteerData.txt";
+        File newfile = new File("temp.txt");
+        File oldfile = new File(filename);
+
+        FileWriter fw = new FileWriter(newfile, true);
+        BufferedWriter bw = new BufferedWriter(fw);
+        PrintWriter pw = new PrintWriter(bw);
+        BufferedReader br = new BufferedReader(new FileReader(oldfile));
+        String s;
+
+
+        while((s = br.readLine()) != null){
+            if(s.equals(name)){
+                bw.write(name + "\n");
+                for(int i = 0; i < 4; i++){
+                    s = br.readLine();
+                    bw.write(s + "\n");
+                }
+                s = br.readLine();
+                if(s.equals("")){
+                    bw.write(dato + ", " + task1 + ", " + timer + "\n");
+                }
+                else{
+                    bw.write(s + "  -  " + dato + ", " + task1 + ", " + timer + "\n");
+                }
+
+            }
+            else{
+                bw.write(s);
+                bw.write("\n");
+            }
         }
+
+        br.close();
+        bw.close();
+        pw.flush();
+        pw.close();
+        oldfile.delete();
+        File dump = new File(filename);
+        newfile.renameTo(dump);
+        succesfully.setText("Shift added succesfully!");
     }
+
+
+
 }
 
 

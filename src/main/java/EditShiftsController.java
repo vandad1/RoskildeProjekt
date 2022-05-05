@@ -1,46 +1,38 @@
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.input.MouseEvent;
 
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 public class EditShiftsController implements AppContact {
 
     @Override
     public void setApp(APPHANDLER app) {
-        this.app = app;
-        ObservableList<Shift> List = FXCollections.observableArrayList(Database.getOBSShift());
-        name.setCellValueFactory(new PropertyValueFactory("name"));
-        date.setCellValueFactory(new PropertyValueFactory("date"));
-        task.setCellValueFactory(new PropertyValueFactory("task"));
-        time.setCellValueFactory(new PropertyValueFactory("time"));
-        table.setItems(List);
+            this.app = app;
         }
 
     @FXML
     public APPHANDLER app;
 
     @FXML
-    public TableView<Shift> table;
+    public TableView<User> table;
 
     @FXML
-    public TableColumn<Shift, String> name;
+    public TableColumn<User, String> task;
 
     @FXML
-    public TableColumn<Shift, String> date;
+    public TableColumn<User, String> date;
 
     @FXML
-    public TableColumn<Shift, String> task;
-
-    @FXML
-    public TableColumn<Shift, String> time;
+    public TableColumn<User, String> time;
 
     @FXML
     public void GoBackMenuR(MouseEvent mouseEvent) throws IOException {
@@ -52,12 +44,24 @@ public class EditShiftsController implements AppContact {
         app.logout1();
     }
 
-    public void List(APPHANDLER app, ObservableList observableList) {
 
+    ObservableList<User> List = FXCollections.observableArrayList(
+            new User("Goere rent", "05/03/2022", "15:00 - 19:00"),
+            new User("Rens", "05/03/2022", "15:00 - 20:00"),
+            new User("Hotdog service", "05/03/2022", "20:00 - 24:00")
+    );
+
+
+    public void List(APPHANDLER app, ResourceBundle resourceBundle) {
+        task.setCellValueFactory(new PropertyValueFactory<User, String>("getTask"));
+        date.setCellValueFactory(new PropertyValueFactory<User, String>("getDate"));
+        time.setCellValueFactory(new PropertyValueFactory<User, String>("getTime"));
+
+        table.setItems(List);
     }
 
 
-}
+    }
 
 
 
