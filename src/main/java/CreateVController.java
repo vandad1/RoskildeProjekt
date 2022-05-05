@@ -67,45 +67,6 @@ public class CreateVController implements AppContact {
             missing.setTextFill(GREEN);
             missing.setText("Volunteer Created Successfully!");
 
-
-            //done +Database add V
-            /* volunteerInfo = new File("VolunteerData.txt");
-
-            BufferedWriter bw = new BufferedWriter(new FileWriter(volunteerInfo, true));
-            PrintWriter pw = new PrintWriter(bw);
-
-            bw.write(name1 + "\n");
-            bw.write(email1 + "\n");
-            bw.write(phonenr1 + "\n");
-            bw.write(address1 + "\n");
-
-            char[] characters = "abcdefghijklmnopqrstuvwxyz0123456789".toCharArray();
-            Random random = new SecureRandom();
-            StringBuilder pass = new StringBuilder();
-            for (int i = 0; i < 5; i++) {
-                pass.append(characters[random.nextInt(characters.length)]);
-            }
-            bw.write(String.valueOf(pass) + "\n");
-            for (int i = 0; i < 2; i++) {
-                bw.write("\n");
-            }
-
-
-            password.setText(String.valueOf(pass));
-
-            auto.setText("Auto Generated Password:");
-
-            missing.setTextFill(GREEN);
-            missing.setText("Volunteer Created Succesfully!");
-
-            bw.close();
-            pw.close();
-
-            */
         }
-
-
     }
-
-
 }

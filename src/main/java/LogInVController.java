@@ -47,37 +47,7 @@ public class LogInVController implements AppContact {
             login.setTextFill(Color.web("#FF0000"));
     }
 
-        /*
-        File VolunteerData = new File("VolunteerData.txt");
-
-        BufferedReader rd = new BufferedReader(new FileReader(VolunteerData));
-
-        String s;
-        while ((s = rd.readLine()) != null) { //done +Database getUser
-
-            if (s.equals(usernameuse)) {
-
-                for (int i = 0; i < 3; i++) {
-                    s = rd.readLine();
-                }
-
-                if (s.equals(passworduse)) {
-                    app.OpenStartV();
-
-
-                } else {
-                    login.setText("Wrong username or password");
-                    login.setTextFill(Color.web("#FF0000"));
-
-                }
-
-            } else {
-                login.setText("Wrong username or password");
-                login.setTextFill(Color.web("#FF0000"));
-            }
-        }
-        rd.close();*/
-    }
+}
 
 
 

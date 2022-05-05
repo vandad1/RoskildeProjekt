@@ -21,15 +21,6 @@ public class EditShiftsController implements AppContact {
         date.setCellValueFactory(new PropertyValueFactory("date"));
         task.setCellValueFactory(new PropertyValueFactory("task"));
         time.setCellValueFactory(new PropertyValueFactory("time"));
-        /*table.setEditable(true);
-        name.setEditable(true);
-        date.setEditable(true);
-        task.setEditable(true);
-        time.setEditable(true);
-        name.setCellFactory(TextFieldTableCell.forTableColumn());
-        date.setCellFactory(TextFieldTableCell.forTableColumn());
-        task.setCellFactory(TextFieldTableCell.forTableColumn());
-        time.setCellFactory(TextFieldTableCell.forTableColumn());*/
         table.setItems(List);
         }
 
