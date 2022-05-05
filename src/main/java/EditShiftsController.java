@@ -80,7 +80,14 @@ public class EditShiftsController implements AppContact {
     }
 
 
+    private static class Database {
+        public static Object get;
+
+        public static Object getVagter() {
+            return getVagter();
+        }
     }
+}
 
 
 
